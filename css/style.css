@@ -1,0 +1,37 @@
+body {
+    font-family: Roboto;
+    background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/dwtoledo_bgimage-scaled.jpg');
+    background-size: 100vw auto;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+}
+
+a {
+  color: whitesmoke;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-title {
+  color: black;
+  text-align: center;
+}
+
+.site-subtitle {
+  color: black;
+  font-style: italic;
+  text-align: center;
+}
