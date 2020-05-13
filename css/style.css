@@ -11,9 +11,23 @@ body {
     background-size: 100vw auto;
 }
 
+/*if screen have at least x pixel, the style below will load*/
+@media (min-width: 700px) {
+  body {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 1.5em;
+  }
+}
+
 header {
   height: 50vh;
   display: flex;
+  padding-top: 30px;
   justify-content: center;
   align-items: center;
 }
