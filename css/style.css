@@ -1,7 +1,75 @@
+/*css soft reset - avoid the browser set standard values that may confuse the frondend developer*/ 
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
     font-family: Roboto;
-    background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/dwtoledo_bgimage-scaled.jpg');
+    background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/dwtoledo_image.jpg');
     background-size: 100vw auto;
+}
+
+header {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  text-align: center;
+}
+
+section div figcaption {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+section div figure {
+  padding: 15px;
+}
+
+/*if screen have at least x pixel, the style below will load*/
+@media (min-width: 1025px) {
+  section div {
+    display: flex;
+    justify-content: center;
+  }
+
+  section div figure {
+    padding: 30px;
+  }
+
+  section div figcaption {
+    text-align: left;
+    font-size: 1.3em;
+  }
+} 
+
+.figcaption-viib {
+  color: blue;
+}
+
+.figcaption-viir {
+  color: green;
+}
+
+.figcaption-viis {
+  color: orange;
+}
+
+.menu {
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 15px 30px;
 }
 
 .menu li {
@@ -11,7 +79,7 @@ body {
 .menu ul {
   display: flex;
   justify-content: space-around;
-  background-color: black;
+
 }
 
 a {
@@ -35,3 +103,57 @@ a:hover {
   font-style: italic;
   text-align: center;
 }
+
+.img-viib {
+  border-bottom: 2px solid blue;
+  width: 300px;
+  height: 150px;
+}
+
+.img-viis {
+  border-bottom: 2px solid orange;
+  width: 300px;
+  height: 150px;
+}
+
+/*if screen have at least x pixel, the style below will load*/
+@media (min-width: 500px) {
+
+  .img-viib {
+    width: 450px;
+    height: 225px;
+  }
+  
+  .img-viis {
+    width: 450px;
+    height: 225px;
+  }
+}
+
+/*if screen have at least x pixel, the style below will load*/
+@media (min-width: 700px) {
+
+  .img-viib {
+    width: 600px;
+    height: 300px;
+  }
+  
+  .img-viis {
+    width: 600px;
+    height: 300px;
+  }
+} 
+
+/*if screen have at least x pixel, the style below will load*/
+@media (min-width: 1025px) {
+
+  .img-viib {
+    width: 600px;
+    height: 300px;
+  }
+  
+  .img-viis {
+    width: 600px;
+    height: 300px;
+  }
+} 
