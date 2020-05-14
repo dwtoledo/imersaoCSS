@@ -6,7 +6,6 @@
 }
 
 body {
-    font-family: Roboto;
     background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/dwtoledo_image.jpg');
     background-size: 100vw auto;
 }
@@ -32,49 +31,47 @@ header {
   align-items: center;
 }
 
-section {
+.projects {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.projects h2 {
+  font-weight: 300;
+  font-style: italic;
   text-align: center;
 }
 
-section div figcaption {
+.projects .grid {
+  display: grid;
+}
+
+.grid figure {
+  padding-top: 1.5em;
   text-align: center;
-  font-size: 1.3em;
 }
 
-section div figure {
-  padding: 15px;
+.grid figcaption {
+  font-size: 1.2em;
 }
-
-/*if screen have at least x pixel, the style below will load*/
-@media (min-width: 1025px) {
-  section div {
-    display: flex;
-    justify-content: center;
-  }
-
-  section div figure {
-    padding: 30px;
-  }
-
-  section div figcaption {
-    text-align: left;
-    font-size: 1.3em;
-  }
-} 
 
 .figcaption-viib {
-  color: blue;
+  color: #037ab1;
+  font-weight: 700;
 }
 
 .figcaption-viir {
   color: green;
+  font-weight: 700;
 }
 
 .figcaption-viis {
-  color: orange;
+  color: #e49a00;
+  font-weight: 700;
 }
 
 .menu {
+  font-family: 'Roboto', sans-serif;
   background-color: black;
   position: fixed;
   width: 100vw;
@@ -93,7 +90,6 @@ section div figure {
 .menu ul {
   display: flex;
   justify-content: space-around;
-
 }
 
 a {
@@ -108,26 +104,40 @@ a:hover {
 }
 
 .site-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   color: black;
   text-align: center;
 }
 
 .site-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   color: black;
   font-style: italic;
   text-align: center;
 }
 
 .img-viib {
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #037ab1;
   width: 300px;
   height: 150px;
+  transition: transform .5s ease;
+}
+
+.img-viib:hover {
+  transform: scale(102%);
 }
 
 .img-viis {
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid #e49a00;
   width: 300px;
   height: 150px;
+  transition: transform .5s ease;
+}
+
+.img-viis:hover {
+  transform: scale(102%);
 }
 
 /*if screen have at least x pixel, the style below will load*/
@@ -156,10 +166,37 @@ a:hover {
     width: 600px;
     height: 300px;
   }
-} 
+}
 
 /*if screen have at least x pixel, the style below will load*/
-@media (min-width: 1025px) {
+@media (min-width: 1100px) {
+
+  .img-viib {
+    width: 500px;
+    height: 250px;
+  }
+  
+  .img-viis {
+    width: 500px;
+    height: 250px;
+  }
+
+  .projects .grid {
+    display: grid;
+    grid-template-columns: 550px 550px;
+    justify-content: space-around;
+  }
+
+  .grid figcaption {
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 25px;
+  }
+
+}
+
+/*if screen have at least x pixel, the style below will load*/
+@media (min-width: 1300px) {
 
   .img-viib {
     width: 600px;
@@ -170,4 +207,15 @@ a:hover {
     width: 600px;
     height: 300px;
   }
-} 
+  .projects .grid {
+    display: grid;
+    grid-template-columns: 660px 660px;
+    justify-content: space-around;
+  }
+
+  .grid figcaption {
+    font-size: 1.3em;
+    text-align: left;
+    padding-left: 25px;
+  }
+}
