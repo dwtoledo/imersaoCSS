@@ -5,36 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Douglas Toledo</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/885214230e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <header>
         <nav class="menu">
         <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#aboutID">About</a></li>
+            <li><a href="#projectsID">Projects</a></li>
             <li><a href="mailto:douglas@viisolutions.com.br" target="_blank">Contact</a></li>      
         </ul>
         </nav>
-        <div>
-            <h1 class="site-title">Douglas Toledo</h1>
-            <h2 class="site-subtitle">jr. <b>frontend developer</b></h2>
+        <div class="grid-header">
+            <div class="image-profile">
+                <img class="img-profile" src="https://viisolutions.com.br/wp-content/uploads/2020/05/profile.jpg" alt="Douglas Toledo">
+            </div>
+            <div class="text-profile">
+                <h1 class="site-title">Douglas Toledo</h1>
+                <h2 class="site-subtitle">jr. <b>frontend developer</b></h2>
+            </div>
         </div>
     </header>
-    <section class="projects">
-        <h2>Projects</h2>
+    <section class="about" id="aboutID">
+        <h2>about<b> me</b></h2>
+        <h3>A <b>frontend development enthusiast</b> after worked in ViiBus and ViiRotas projects. Master Business Administration from FGV – Getúlio Vargas Foundation. Has over 5 years of experience as an entrepreneur at ViiSolutions, a startup focused on products and services development for people with disabilities.</h3>
+    </section>
+    <section class="projects" id="projectsID">
+        <h2>vii<b>projects</b></h2>
         <div class="grid">
             <figure>
                 <a href="https://viibus.com.br" target="_blank"><img class="img-viib" src="https://viisolutions.com.br/wp-content/uploads/2020/05/viib-site.jpg" alt="ViiBus"></a>
-                <figcaption>Vii<b class="figcaption-viib">Bus</b></figcaption>
+                <figcaption>vii<b class="figcaption-viib">bus</b></figcaption>
             </figure>
             <figure>
                 <a href="https://viisolutions.com.br" target="_blank"><img class="img-viis" src="https://viisolutions.com.br/wp-content/uploads/2020/05/viis-site.jpg" alt="ViSolutions"></a>
-                <figcaption>Vii<b class="figcaption-viis">Solutions</b></figcaption>
+                <figcaption>vii<b class="figcaption-viis">solutions</b></figcaption>
             </figure>
         </div>
     </section>
-
+    <section class="contacts">
+        <h2><b>contact</b> me</h2>
+        <div class="grid-icons">
+            <a target="_blank" href="https://github.com/dwtoledo">
+                <i class="fab fa-github-square"></i> github.com/dwtoledo
+            </a>
+            <a target="_blank" href="https://twitter.com/dwtoledo">
+                <i class="fab fa-twitter-square"></i> twitter.com/dwtoledo
+            </a>
+            <a target="_blank" href="https://www.instagram.com/dwtoledo/">
+                <i class="fab fa-instagram"></i> instagram.com/dwtoledo
+            </a>
+            <a target="_blank" href="https://linkedin.com/dwtoledo">
+                <i class="fab fa-linkedin"></i> linkedin.com/dwtoledo
+            </a>
+            <a target="_blank" href="mailto:douglas@viisolutions.com.br">
+                <i class="fas fa-envelope"></i> douglas@viisolutions.com.br
+            </a>
+        </div>
+    </section>
 </body>
 </html>

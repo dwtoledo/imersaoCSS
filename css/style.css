@@ -6,8 +6,8 @@
 }
 
 body {
-    background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/dwtoledo_image.jpg');
-    background-size: 100vw auto;
+  background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/dwtoledo_image.jpg');
+  background-size: 100vw auto;
 }
 
 /*if screen have at least x pixel, the style below will load*/
@@ -24,26 +24,81 @@ body {
 }
 
 header {
-  height: 50vh;
-  display: flex;
-  margin-top: 30px;
-  justify-content: center;
+  display: grid;
+  height: 65vh;
+  margin-top: 51px;
   align-items: center;
 }
 
-.projects {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+.grid-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.projects h2 {
+.img-profile {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+/*if screen have at least x pixel, the style below will load*/
+@media (min-width: 550px) {
+
+  .grid-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .image-profile {
+    display: grid;
+    align-items: center;
+    justify-content: right;
+    padding-right: 1em;
+  }
+  
+  .text-profile {
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    padding-left: 1em;
+  }
+
+  .img-profile {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+}
+
+.contacts h2,
+.projects h2,
+.about h2 {
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-style: italic;
   text-align: center;
 }
 
+.projects h3,
+.about h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: left;
+  padding: 2em;
+}
+
+.about .grid,
 .projects .grid {
   display: grid;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 .grid figure {
@@ -53,21 +108,39 @@ header {
 
 .grid figcaption {
   font-size: 1.2em;
+  font-style: italic;
 }
 
 .figcaption-viib {
-  color: #037ab1;
-  font-weight: 700;
-}
-
-.figcaption-viir {
-  color: green;
-  font-weight: 700;
+  color: #0070cc;
 }
 
 .figcaption-viis {
-  color: #e49a00;
-  font-weight: 700;
+  color: #e48100;
+}
+
+.contacts {
+  margin-top: 2em;
+}
+
+.grid-icons {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contacts a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: black;
+  font-size: 1em;
+}
+
+.contacts a:active,
+.contacts a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 1px black;
 }
 
 .menu {
@@ -80,7 +153,7 @@ header {
 
 .menu a {
   display: block;
-  padding: 15px 30px;
+  padding: 15px 30px;  
 }
 
 .menu li {
@@ -99,6 +172,7 @@ a {
   text-decoration: none;
 }
 
+a:active,
 a:hover {
   text-decoration: underline;
 }
@@ -119,23 +193,25 @@ a:hover {
 }
 
 .img-viib {
-  border-bottom: 2px solid #037ab1;
+  border: 2px solid #0070cc;
   width: 300px;
   height: 150px;
   transition: transform .5s ease;
 }
 
+.img-viib:active,
 .img-viib:hover {
   transform: scale(102%);
 }
 
 .img-viis {
-  border-bottom: 2px solid #e49a00;
+  border: 2px solid #e48100;
   width: 300px;
   height: 150px;
   transition: transform .5s ease;
 }
 
+.img-viis:active,
 .img-viis:hover {
   transform: scale(102%);
 }
@@ -147,7 +223,7 @@ a:hover {
     width: 450px;
     height: 225px;
   }
-  
+
   .img-viis {
     width: 450px;
     height: 225px;
@@ -181,6 +257,7 @@ a:hover {
     height: 250px;
   }
 
+  .about .grid,
   .projects .grid {
     display: grid;
     grid-template-columns: 550px 550px;
@@ -192,7 +269,6 @@ a:hover {
     text-align: left;
     padding-left: 25px;
   }
-
 }
 
 /*if screen have at least x pixel, the style below will load*/
@@ -207,6 +283,7 @@ a:hover {
     width: 600px;
     height: 300px;
   }
+  .about .grid,
   .projects .grid {
     display: grid;
     grid-template-columns: 660px 660px;
