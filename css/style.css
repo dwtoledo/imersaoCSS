@@ -25,8 +25,8 @@ body {
 
 header {
   display: grid;
-  height: 65vh;
-  margin-top: 51px;
+  height: 75vh;
+  margin-top: 50px;
   align-items: center;
 }
 
@@ -83,15 +83,14 @@ header {
   font-weight: 300;
   font-style: italic;
   text-align: center;
+  padding-bottom: 1.5em;
 }
 
-.projects h3,
-.about h3 {
+.about p {
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   font-weight: 300;
-  text-align: left;
-  padding: 2em;
+  text-align: center;
 }
 
 .about .grid,
@@ -119,12 +118,19 @@ header {
   color: #e48100;
 }
 
+.about,
+.projects{
+  padding: 2em;
+}
+
 .contacts {
-  margin-top: 2em;
+  padding-top: 2em;
+  padding-right: 2em;
+  padding-left: 2em;
+
 }
 
 .grid-icons {
-  margin: 2em;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -141,6 +147,15 @@ header {
 .contacts a:hover {
   text-decoration: none;
   text-shadow: 0px 0px 1px black;
+}
+
+.contacts p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: black;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 1em;
 }
 
 .menu {
