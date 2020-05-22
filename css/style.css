@@ -6,8 +6,9 @@
 }
 
 body {
-  background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/dwtoledo_image.jpg');
+  background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/footer_test.jpg');
   background-size: 100vw auto;
+  background-repeat: repeat-y;
 }
 
 /*if screen have at least x pixel, the style below will load*/
@@ -28,6 +29,9 @@ header {
   height: 75vh;
   margin-top: 50px;
   align-items: center;
+  background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/header_test.jpg');
+  background-size: 100vw auto;
+  background-repeat: no-repeat;
 }
 
 .grid-header {
@@ -69,8 +73,8 @@ header {
   }
 
   .img-profile {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     border: 2px solid black;
   }
@@ -153,9 +157,9 @@ header {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: black;
-  font-size: 1em;
+  font-size: 0.7em;
   text-align: center;
-  margin-top: 1em;
+  margin-top: 2em;
 }
 
 .menu {
