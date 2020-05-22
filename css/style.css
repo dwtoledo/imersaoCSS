@@ -7,7 +7,8 @@
 
 body {
   background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/dwtoledo_bgimage_edited-3.jpg');
-  background-size: 100vw auto;
+  background-position: center top;
+  background-size: cover;
 }
 
 /*if screen have at least x pixel, the style below will load*/
@@ -153,7 +154,7 @@ header {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: black;
-  font-size: 0.7  em;
+  font-size: 0.7em;
   text-align: center;
   margin-top: 1em;
 }
