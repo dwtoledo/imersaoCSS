@@ -36,44 +36,80 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+  height: 75vh;
+}
+
+@media (min-width: 550px) {
+  .grid-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 75vh;
+  }
+}
+
+.card-profile {
+  width: 220px;
+  height: 220px;
+  display: grid;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.flip-card:hover .card-profile {
+  transform: rotateY(180deg);
+}
+
+.front-profile {
+  position: absolute;
 }
 
 .img-profile {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
   border: 2px solid black;
+  border-radius: 50%;
+  backface-visibility: hidden;
 }
 
-/*if screen have at least x pixel, the style below will load*/
+.back-profile {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 220px;
+  height: 220px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.back-profile p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.text-profile {
+  padding-top: 1.5em;
+}
+
 @media (min-width: 550px) {
-
-  .grid-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .image-profile {
-    display: grid;
-    align-items: center;
-    justify-content: right;
-    padding-right: 1em;
-  }
-  
   .text-profile {
-    display: grid;
-    align-items: center;
-    justify-content: left;
-    padding-left: 1em;
-  }
-
-  .img-profile {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 2px solid black;
+    padding-top: 0;
+    padding-left: 2em;
   }
 }
 
