@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url('https://viisolutions.com.br/wp-content/uploads/2020/05/dwtoledo_bgimage_edited-3.jpg');
+  background-image: url('../img/background.jpg');
   background-position: center top;
   background-size: cover;
 }
