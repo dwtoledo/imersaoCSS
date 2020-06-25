@@ -1,0 +1,151 @@
+body {
+    background-image: url('../img/background.jpg');
+    background-position: center top;
+    background-size: cover;
+}
+  
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 1em;
+    height: 70px;
+}
+
+.image-nav {
+    position: relative;
+}
+
+.image-nav img {
+    position: absolute;
+    width: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: black solid 1px;
+}
+
+.buttons-nav {
+    position: relative;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 2.5em;   
+}
+
+nav a {
+    font-family: Roboto;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.grid-section {
+    border: black solid 1px;
+}
+
+.grid-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.area {
+    font-family: Roboto;
+    width: 100%;
+    height: 60vh;
+    color: black;
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.element-1 {
+    position: relative;
+    background-color: pink;
+}
+
+.element-2 {
+    position: relative;
+    background-color: greenyellow;
+}
+
+
+.element-3 {
+    position: relative;
+    background-color: rgb(22, 142, 255);
+}
+
+.element-interno {
+    font-family: Roboto;
+    width: 50%;
+    height: 50%;
+    color: black;
+    font-size: 0.7em;
+    font-weight: 300;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.float-elements {
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+    border-bottom: black solid 1px;
+}
+
+.area-2 {
+    font-family: Roboto;
+    width: 300px;
+    height: 150px;
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.element-4 {
+    background-color: yellow;
+    color: black;
+    float: right;
+    position: relative;
+}
+
+.element-5 {
+    background-color: blueviolet;
+    color: whitesmoke;
+    float: left;
+    position: relative;
+}
+
+.paragraph {
+    font-family: Roboto;
+    overflow: hidden;
+    font-size: 1.2em;
+    clear: both;
+    padding: 2em;
+    text-align: justify;
+    text-indent: 1.5em;
+    line-height: 1.3em;
+}
+
+.paragraph strong {
+    font-size: 1.5em;
+}

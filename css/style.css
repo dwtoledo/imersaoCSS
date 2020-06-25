@@ -196,6 +196,36 @@ header {
 
 .left-side h3 {
   text-align: justify;
+  text-indent: 2.5em;
+  font-size: 1em;
+}
+
+.left-side h3 a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: blue;
+}
+
+.grids-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2em;
+  width: 60%;
+  height: 50px;
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  font-size: 1em;
+  font-family: Roboto;
+  border: 1px solid black;
+}
+
+.grids-button:hover {
+  background-color: #4CAF50;
+  border: 1px solid #4CAF50;
+  color: white;
 }
 
 .right-side {
@@ -222,8 +252,9 @@ header {
 .right-row1front {
   align-content: center;
   backface-visibility: hidden;
-  background-color: rgba(0, 153, 255);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: black solid 1.5px;
+  color: black;
   display: grid;
   height: 100%;
   position: absolute;
@@ -234,9 +265,8 @@ header {
 .right-row1back {
   align-content: center;
   backface-visibility: hidden;
-  background-color: white;
-  border: 1px solid rgba(0, 153, 255);
-  color: rgba(0, 153, 255);
+  background-color: rgba(0, 153, 255);
+  color: white;
   display: grid;
   height: 100%;
   position: absolute;
@@ -273,8 +303,9 @@ header {
 .row21-area1front {
   backface-visibility: hidden;
   display: grid;
-  background-color: rgba(204, 0, 255);
-  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: black solid 1.5px;
+  color: black;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -285,9 +316,8 @@ header {
 .row21-area1back {
   backface-visibility: hidden;
   display: grid;
-  background-color: white;
-  color: rgba(204, 0, 255);
-  border: 1px solid rgba(204, 0, 255);
+  background-color: rgba(204, 0, 255);
+  color: white;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -310,10 +340,11 @@ header {
 }
 
 .row21-area2front {
-  background-color: rgba(0, 185, 83);
   backface-visibility: hidden;
   display: grid;
-  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: black solid 1.5px;
+  color: black;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -324,9 +355,8 @@ header {
 .row21-area2back {
   backface-visibility: hidden;
   display: grid;
-  background-color: white;
-  color: rgba(0, 185, 83);
-  border: 1px solid rgba(0, 185, 83);
+  background-color: rgba(0, 185, 83);
+  color: white;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -355,10 +385,11 @@ header {
 }
 
 .row22-area1front {
-  background-color: rgba(255, 166, 0);
   backface-visibility: hidden;
   display: grid;
-  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: black solid 1.5px;
+  color: black;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -369,9 +400,8 @@ header {
 .row22-area1back {
   backface-visibility: hidden;
   display: grid;
-  background-color: white;
-  color: rgba(255, 166, 0);
-  border: 1px solid rgba(255, 166, 0);
+  background-color: rgba(255, 166, 0);
+  color: white;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -394,10 +424,11 @@ header {
 }
 
 .row22-area2front {
-  background-color: rgba(82, 62, 94);
   backface-visibility: hidden;
   display: grid;
-  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: black solid 1.5px;
+  color: black;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -408,9 +439,8 @@ header {
 .row22-area2back {
   backface-visibility: hidden;
   display: grid;
-  background-color: white;
-  color: rgba(82, 62, 94);
-  border: 1px solid rgba(82, 62, 94);
+  background-color: rgba(82, 62, 94);
+  color: white;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -439,10 +469,11 @@ header {
 }
 
 .row3-area1front {
-  background-color: rgba(23, 160, 153);
   backface-visibility: hidden;
   display: grid;
-  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: black solid 1.5px;
+  color: black;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -453,9 +484,8 @@ header {
 .row3-area1back {
   backface-visibility: hidden;
   display: grid;
-  background-color: white;
-  color: rgba(23, 160, 153);
-  border: 1px solid rgba(23, 160, 153);
+  background-color: rgba(23, 160, 153);
+  color: white;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -478,10 +508,11 @@ header {
 }
 
 .row3-area2front {
-  background-color: rgba(255, 172, 230);
   backface-visibility: hidden;
   display: grid;
-  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: black solid 1.5px;
+  color: black;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -492,9 +523,8 @@ header {
 .row3-area2back {
   backface-visibility: hidden;
   display: grid;
-  background-color: white;
-  color: rgba(255, 172, 230);
-  border: 1px solid rgba(255, 172, 230);
+  background-color: rgba(255, 172, 230);
+  color: white;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -517,10 +547,11 @@ header {
 }
 
 .right-row4front {
-  background-color: rgba(255, 111, 97);
   backface-visibility: hidden;
   display: grid;
-  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: black solid 1.5px;
+  color: black;
   align-content: center;
   height: 100%;
   position: absolute;
@@ -531,9 +562,8 @@ header {
 .right-row4back {
   backface-visibility: hidden;
   display: grid;
-  background-color: white;
-  color: rgba(255, 111, 97);
-  border: 1px solid rgba(255, 111, 97);
+  background-color: rgba(255, 111, 97);
+  color: white;
   align-content: center;
   height: 100%;
   position: absolute;
