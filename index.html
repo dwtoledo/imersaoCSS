@@ -13,17 +13,17 @@
     <header>
         <nav class="menu">
         <ul>
-            <li><a href="#aboutID">About</a></li>
-            <li><a href="#projectsID">Projects</a></li>
-            <li><a href="#challengeID">Challenge</a></li>
-            <li><a href="#contactID">Contact</a></li>      
+            <li><a href="#aboutID"><strong>about</strong> me <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="#projectsID">vii<strong>projects</strong> <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="#challengeID"><strong>challenge</strong> <i class="fas fa-chevron-right"></i></a></li>
+            <li><a href="#contactID"><strong>contact</strong> me <i class="fas fa-chevron-right"></i></a></li>      
         </ul>
         </nav>
         <div class="grid-header">
             <div class="flip-card">
                 <div class="card-profile">
                     <div class="front-profile">
-                        <img class="img-profile" src="img/profile.jpg" alt="Douglas Toledo">
+                        <img class="img-profile" src="img/profile.jpg" alt="Douglas Toledo's profile image">
                     </div>
                     <div class="back-profile">
                         <p>it is <b>me!</b></p>
@@ -38,22 +38,21 @@
     </header>
 
     <section class="about" id="aboutID">
-        <h2>about<b> me</b></h2>
+        <h2><strong>about</strong> me</h2>
         <p>
             I am a <b>frontend development enthusiast</b> after worked in ViiBus and ViiRotas projects. I have +5 years of experience as an entrepreneur at ViiSolutions startup, focused on products and services research & development for people with disabilities.
         </p>
-
     </section>
 
     <section class="projects" id="projectsID">
         <h2>vii<b>projects</b></h2>
         <div class="grid">
             <figure>
-                <a href="https://viibus.com.br" target="_blank"><img class="img-viib" src="img/viib-site.jpg" alt="ViiBus"></a>
+                <a href="https://viibus.com.br" target="_blank"><img class="img-viib" src="img/viib-site.jpg" alt="ViiBus website picture"></a>
                 <figcaption>vii<b class="figcaption-viib">bus</b></figcaption>
             </figure>
             <figure>
-                <a href="https://viisolutions.com.br" target="_blank"><img class="img-viis" src="img/viis-site.jpg" alt="ViSolutions"></a>
+                <a href="https://viisolutions.com.br" target="_blank"><img class="img-viis" src="img/viis-site.jpg" alt="ViSolutions website picture"></a>
                 <figcaption>vii<b class="figcaption-viis">solutions</b></figcaption>
             </figure>
         </div>
@@ -73,7 +72,7 @@
                     <p>
                         <strong>I also prepared a example page</strong>, with more grid, float elements & position examples for you! Visit clicking in below button:
                     </p>
-                    <a href="grids.html" target="_blank"><button class="grids-button"><i class="fas fa-columns"></i> Example page</button></a>
+                    <a href="grids.html" target="_blank"><button class="grids-button"><strong>example </strong>page</button></a>
                 </h3>
             </div>
             <div class="right-side">
@@ -167,36 +166,88 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
     <section class="contacts" id="contactID">
-        <h2><b>contact</b> me</h2>
-        <div class="grid-icons">
-            <a target="_blank" href="https://github.com/dwtoledo">
-                <i class="fab fa-github-square"></i> github.com/dwtoledo
-            </a>
-            <a target="_blank" href="https://twitter.com/dwtoledo">
-                <i class="fab fa-twitter-square"></i> twitter.com/dwtoledo
-            </a>
-            <a target="_blank" href="https://www.instagram.com/dwtoledo/">
-                <i class="fab fa-instagram"></i> instagram.com/dwtoledo
-            </a>
-            <a target="_blank" href="https://linkedin.com/dwtoledo">
-                <i class="fab fa-linkedin"></i> linkedin.com/dwtoledo
-            </a>
-            <a target="_blank" href="mailto:dwtoledo@outlook.com">
-                <i class="fas fa-envelope"></i> dwtoledo@outlook.com
-            </a>
-        </div>
+        <h2>@dwtoledo <strong>contact</strong></h2>
+
+        <form class="contact-form">
+
+            <fieldset class="form-main">
+                <legend>use the form below to contact me:</legend>
+                <label for="name">name:</label>
+                <input type="text" id="name" class="block-position" required>
+    
+                <label for="email">e-mail:</label>
+                <input type="email" id="email" class="block-position" required placeholder="email@domain.com">
+    
+                <label for="phone">phone:</label>
+                <input type="tel" id="phone" class="block-position" required placeholder="+12 (34) 56789-0123">
+    
+                <label for="message">message:</label>
+                <textarea id="message" cols="30" rows="10" class="block-position" required placeholder="type your message here"></textarea>
+            </fieldset>
+
+            <fieldset class="form-radios">
+                <legend>preferred contact:</legend>
+                <label for="radio-email"><input type="radio" name="contact" id= "radio-email">e-mail</label>
+
+                <label for="radio-phone"><input type="radio" name="contact" id= "radio-phone">phone</label>
+                
+                <label for="radio-whatsapp"><input type="radio" name="contact" id= "radio-whatsapp" checked>whatsapp</label>                
+            </fieldset>
+
+            <fieldset class="form-subscribe">
+                <legend>subscribe to receive news?</legend>
+                <select>
+                    <option selected>Yes</option>
+                    <option>No</option>
+                </select>
+            </fieldset>
+
+            <input type="submit" value="send me" class="submit-button">
+
+        </form>
     </section>
 
-    <section class="footer">
-        <p>
-            This portfolio page was created during <a href="https://www.alura.com.br/imersao-css" target="_blank">CSS immersion course by Alura</a>
-        </p>
-    </section>
+    <footer class="footer">
+        <div class="footer-icons">
+            <table>
+                <thead>
+                    <th colspan="4">my <strong>socials:</strong> > this is a table 4x3!</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a target="_blank" href="https://github.com/dwtoledo"><i class="fab fa-github-square"></i></a>
+                        </td>
+                        <td>github</td>
+                        <td>
+                            <a target="_blank" href="https://twitter.com/dwtoledo"><i class="fab fa-twitter-square"></i></a>
+                        </td>
+                        <td>twitter</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a target="_blank" href="https://www.instagram.com/dwtoledo/"><i class="fab fa-instagram"></i></a>
+                        </td>
+                        <td>instagram</td>
+                        <td>
+                            <a target="_blank" href="https://linkedin.com/dwtoledo"><i class="fab fa-linkedin"></i></a>
+                        </td>
+                        <td>linkedin</td>
+                    </tr>
+                </tbody>
+            </table>           
+        </div>
+        <div class="footer-text">
+            <p>
+                This portfolio page was created during
+            </p>
+            <p><a href="https://www.alura.com.br/imersao-css" target="_blank">CSS immersion course by Alura</a>
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>

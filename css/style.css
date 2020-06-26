@@ -48,7 +48,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
   height: 75vh;
 }
 
@@ -58,7 +57,6 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100vw;
     height: 75vh;
   }
 }
@@ -204,7 +202,7 @@ header {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1em;
-  color: blue;
+  color: #4CAF50;
 }
 
 .grids-button {
@@ -215,17 +213,18 @@ header {
   width: 60%;
   height: 50px;
   transition-duration: 0.4s;
-  background-color: white;
-  color: black;
+  background-color: #4CAF50;
+  color: white;
   font-size: 1em;
-  font-family: Roboto;
-  border: 1px solid black;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  border: none;
 }
 
 .grids-button:hover {
-  background-color: #4CAF50;
+  background-color: white;
   border: 1px solid #4CAF50;
-  color: white;
+  color: #4CAF50;
 }
 
 .right-side {
@@ -578,45 +577,6 @@ header {
 
 }
 
-.grid-icons {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.contacts a {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  color: black;
-  font-size: 1em;
-}
-
-.contacts a:active,
-.contacts a:hover {
-  text-decoration: none;
-  text-shadow: 0px 0px 1px black;
-}
-
-.contacts p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  color: black;
-  font-size: 0.7em;
-  text-align: center;
-  margin-top: 1em;
-}
-
-.footer p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.7em;
-  color: whitesmoke;
-  font-weight: 300;
-  text-align: center;
-  background-color: black;
-  margin-top: 3em;
-  padding: 0.4em;
-}
-
 .menu {
   font-family: 'Roboto', sans-serif;
   background-color: black;
@@ -628,7 +588,7 @@ header {
 
 .menu a {
   display: block;
-  padding: 15px 30px;  
+  padding: 10px 30px;  
 }
 
 .menu li {
@@ -637,14 +597,16 @@ header {
 
 .menu ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 a {
   color: whitesmoke;
-  font-size: large;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: 300;
   text-decoration: none;
+  font-style: italic;
 }
 
 a:active,
@@ -777,3 +739,125 @@ a:hover {
     padding-left: 25px;
   }
 }
+
+.block-position {
+  display: block;
+}
+
+.contact-form {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*if screen have at least x pixel, the style below will load*/
+@media (min-width: 550px) {
+
+  .contact-form {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    text-align: center;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.form-main input, .form-main textarea {
+  position: relative;
+  padding: 0.7em;
+  margin: 0.7em 0;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-form fieldset legend {
+  font-weight: 400;
+  text-align: left;
+}
+
+.contact-form fieldset {
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.form-radios label, .form-radios input {
+  margin: 1em 1em;
+}
+
+.form-subscribe select {
+  font-size: 0.7em;
+  padding: 0.5em;
+}
+
+.submit-button {
+  width: 20vw;
+  height: 3em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+.footer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.7em;
+  color: whitesmoke;
+  font-weight: 300;
+  text-align: center;
+  background-color: black;
+  margin-top: 3em;
+  padding: 2em 0 0.5em;
+}
+
+.footer-icons {
+  text-align: center;
+  font-size: 1em;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 2em;
+}
+
+.footer-icons table {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-icons a {
+  color: white;
+  font-size: 4em;
+  margin: 0.1em;
+}
+
+.footer-icons td, .footer-icons th {
+  padding: 5px 5px;
+  text-align: left;
+}
+
+.footer-icons th {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.5em;
+}
+
+.footer-text a {
+  font-weight: bold;
+  font-style: normal;
+}
+
