@@ -126,7 +126,8 @@ header {
 .contacts h2,
 .projects h2,
 .about h2,
-.challenge h2 {
+.challenge h2,
+.javascript h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-style: italic;
@@ -134,11 +135,21 @@ header {
   padding-bottom: 1.5em;
 }
 
-.about p {
+.javascript h2 {
+  padding-bottom: 0.2em;
+}
+
+.about p,
+.javascript p {
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   font-weight: 300;
   text-align: center;
+}
+
+.javascript p {
+  font-style: italic;
+  padding-bottom: 1.5em;
 }
 
 .about .grid,
@@ -570,11 +581,11 @@ header {
   transform: rotateX(180deg);
 }
 
+.javascript,
 .contacts {
   padding-top: 2em;
   padding-right: 2em;
   padding-left: 2em;
-
 }
 
 .menu {
@@ -744,7 +755,8 @@ a:hover {
   display: block;
 }
 
-.contact-form {
+.contact-form,
+.jscalculation {
   position: relative;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -758,7 +770,8 @@ a:hover {
 /*if screen have at least x pixel, the style below will load*/
 @media (min-width: 550px) {
 
-  .contact-form {
+  .contact-form,
+  .jscalculation {
     position: relative;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -770,23 +783,61 @@ a:hover {
   }
 }
 
-.form-main input, .form-main textarea {
-  position: relative;
-  padding: 0.7em;
-  margin: 0.7em 0;
-  width: 80%;
+.form-main input,
+.form-main textarea {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: solid 1px black;
   left: 50%;
+  margin: 0.7em 0;
+  padding: 0.7em;
+  position: relative;
   transform: translateX(-50%);
+  width: 80%;
 }
 
+.jscalculation fieldset legend,
 .contact-form fieldset legend {
   font-weight: 400;
   text-align: left;
 }
 
+.jscalculation fieldset,
 .contact-form fieldset {
   padding: 1em;
   margin: 1em 0;
+}
+
+.jscalculation fieldset div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 550px) {
+  .jscalculation fieldset div{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+div label {
+  text-align: center;
+  padding: 0.5em;
+}
+
+div input {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: solid 1px black;
+  margin-top: 5px;
+  padding: 0.5em;
+}
+
+@media (min-width: 550px) {
+  div input {
+    width: 70%;
+  }
+}
+
+.form-radios label, .form-radios input {
+  margin: 1em 1em;
 }
 
 .form-radios label, .form-radios input {
@@ -806,9 +857,25 @@ a:hover {
   background-color: #4CAF50;
   color: white;
   border: none;
+  transition-duration: 0.4s;
 }
 
-.submit-button:hover {
+.calculation-button {
+  width: 2em;
+  height: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  background-color: #4CAF50;
+  color: white;
+  border: darkslategray 1px solid;
+  margin: 1em 0.2em 0 0.2em;
+  transition-duration: 0.4s;
+  border-radius: 50%;
+  box-shadow: darkslategray 3px 3px;
+}
+
+.submit-button:hover,
+.calculation-button:hover {
   background-color: white;
   color: #4CAF50;
   border: 1px solid #4CAF50;

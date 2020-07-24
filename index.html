@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/885214230e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     
     <header>
@@ -32,7 +34,7 @@
             </div>
             <div class="text-profile">
                 <h1 class="site-title">Douglas Toledo</h1>
-                <h2 class="site-subtitle">jr. <b>frontend developer</b></h2>
+                <h2 class="site-subtitle"><b>frontend</b> developer</h2>
             </div>
         </div>
     </header>
@@ -166,6 +168,73 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="javascript" id="javascriptID">
+        <h2><b>javascript</b> integration</h2>
+        <p>
+            Now its time to integrate JS! Let's start with...
+        </p>
+
+        <form class="jscalculation">
+            <fieldset>
+
+                <legend>2 numbers as user's inputs and a button to call a JS function to calculate then:</legend>
+
+                <div>
+                    <label for="number1">number #1:</label>
+                    <input type="number" id="number1" required>
+                    <label for="number2">number #2:</label>
+                    <input type="number" id="number2" required>
+                </div>
+
+                <label>select the operator:</label>
+                <button class="calculation-button" id="sum_button">+</button>
+                <button class="calculation-button" id="sub_button">-</button>
+                <button class="calculation-button" id="mul_button">x</button>
+                <button class="calculation-button" id="div_button">÷</button>
+
+            </fieldset>
+        </form>
+    
+        <script>
+
+            var number1 = document.getElementById("number1");
+            var number2 = document.getElementById("number2");
+            var result = 0;
+
+            function sum() {
+                result = parseInt(number1.value) + parseInt(number2.value);
+                alert("The result is: " + result);
+            }
+            
+            function subtraction() {
+                result = parseInt(number1.value) - parseInt(number2.value);
+                alert("The result is: " + result);
+            }
+
+            function multiplication() {
+                result = parseInt(number1.value) * parseInt(number2.value);
+                alert("The result is: " + result);
+            }
+
+            function division() {
+                result = parseInt(number1.value) / parseInt(number2.value);
+                alert("The result is: " + result);
+            }            
+
+            var sum_button = document.getElementById("sum_button");
+            var sub_button = document.getElementById("sub_button");
+            var mul_button = document.getElementById("mul_button");
+            var div_button = document.getElementById("div_button");
+
+            sum_button.onclick = sum;
+            sub_button.onclick = subtraction;
+            mul_button.onclick = multiplication;
+            div_button.onclick = division;
+
+        </script>
+
     </section>
 
     <section class="contacts" id="contactID">
