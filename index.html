@@ -177,11 +177,12 @@
         </p>
 
         <form class="jscalculation">
+
             <fieldset>
 
                 <legend>2 numbers as user's inputs and a button to call a JS function to calculate then:</legend>
 
-                <div>
+                <div class="js-numbers">
                     <label for="number1">number #1:</label>
                     <input type="number" id="number1" required>
                     <label for="number2">number #2:</label>
@@ -189,49 +190,55 @@
                 </div>
 
                 <label>select the operator:</label>
-                <button class="calculation-button" id="sum_button">+</button>
-                <button class="calculation-button" id="sub_button">-</button>
-                <button class="calculation-button" id="mul_button">x</button>
-                <button class="calculation-button" id="div_button">÷</button>
+
+                <div class="js-buttons">
+                    <button class="calculation-button" id="sum_button" onclick="calculate(operators.SUM)">+</button>
+                    <button class="calculation-button" id="sub_button" onclick="calculate(operators.SUBTRACTION)">-</button>
+                    <button class="calculation-button" id="mul_button" onclick="calculate(operators.MULTIPLICATION)">x</button>
+                    <button class="calculation-button" id="div_button" onclick="calculate(operators.DIVISION)">÷</button>
+                </div>
 
             </fieldset>
+
         </form>
     
         <script>
+
+            const operators = {
+                SUM: 'sum',
+                SUBTRACTION: 'sub',
+                MULTIPLICATION: 'mul',
+                DIVISION: 'div'
+            }
 
             var number1 = document.getElementById("number1");
             var number2 = document.getElementById("number2");
             var result = 0;
 
-            function sum() {
-                result = parseInt(number1.value) + parseInt(number2.value);
-                alert("The result is: " + result);
+            function calculate(operator) {
+
+                switch (operator) {
+                    case 'sum':
+                        result = parseInt(number1.value) + parseInt(number2.value);
+                        alert("The result is: " + result);
+                        break;
+                    
+                    case 'sub':
+                        result = parseInt(number1.value) - parseInt(number2.value);
+                        alert("The result is: " + result);
+                        break;
+
+                    case 'mul':
+                        result = parseInt(number1.value) * parseInt(number2.value);
+                        alert("The result is: " + result);
+                        break;
+                    
+                    case 'div':
+                        result = parseInt(number1.value) / parseInt(number2.value);
+                        alert("The result is: " + result);
+                        break;
+                } 
             }
-            
-            function subtraction() {
-                result = parseInt(number1.value) - parseInt(number2.value);
-                alert("The result is: " + result);
-            }
-
-            function multiplication() {
-                result = parseInt(number1.value) * parseInt(number2.value);
-                alert("The result is: " + result);
-            }
-
-            function division() {
-                result = parseInt(number1.value) / parseInt(number2.value);
-                alert("The result is: " + result);
-            }            
-
-            var sum_button = document.getElementById("sum_button");
-            var sub_button = document.getElementById("sub_button");
-            var mul_button = document.getElementById("mul_button");
-            var div_button = document.getElementById("div_button");
-
-            sum_button.onclick = sum;
-            sub_button.onclick = subtraction;
-            mul_button.onclick = multiplication;
-            div_button.onclick = division;
 
         </script>
 

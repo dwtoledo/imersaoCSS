@@ -795,49 +795,45 @@ a:hover {
   width: 80%;
 }
 
-.jscalculation fieldset legend,
-.contact-form fieldset legend {
-  font-weight: 400;
-  text-align: left;
-}
-
-.jscalculation fieldset,
-.contact-form fieldset {
+fieldset {
   padding: 1em;
   margin: 1em 0;
 }
 
-.jscalculation fieldset div{
+fieldset legend {
+  font-weight: 400;
+  text-align: left;
+}
+
+.js-numbers {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-bottom: 2em;
 }
 
 @media (min-width: 550px) {
-  .jscalculation fieldset div{
+  .js-numbers {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 2em;
   }
 }
 
-div label {
+.js-numbers label {
   text-align: center;
   padding: 0.5em;
 }
 
-div input {
+.js-numbers input {
   background-color: rgba(255, 255, 255, 0.3);
   border: solid 1px black;
-  margin-top: 5px;
+  margin-top: 3px;
   padding: 0.5em;
 }
 
 @media (min-width: 550px) {
-  div input {
+  .js-numbers input {
     width: 70%;
   }
-}
-
-.form-radios label, .form-radios input {
-  margin: 1em 1em;
 }
 
 .form-radios label, .form-radios input {
@@ -872,6 +868,12 @@ div input {
   transition-duration: 0.4s;
   border-radius: 50%;
   box-shadow: darkslategray 3px 3px;
+}
+
+@media (max-width: 700px) {
+  .calculation-button {
+    font-size: 1.5em;
+  }
 }
 
 .submit-button:hover,
