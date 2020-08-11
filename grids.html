@@ -3,25 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <title>CSS Grid, Float Elements & Position</title>
-        <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/gridstyle.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">    </head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/885214230e.js" crossorigin="anonymous"></script>
+    </head>
+    
     <body>
 
         <header>
-            <div class="image-nav">
-                <img src="img/header_logo.jpg" alt="Header random picture">
-            </div>
-            <div class="buttons-nav">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#section-1">Section#1</a></li>
-                        <li><a href="#section-2">Section#2</a></li>
-                        <li><a href="index.html#contactID">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html"><strong>home</strong> <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#section-1">section<strong>#1</strong> <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="#section-2">section<strong>#2</strong> <i class="fas fa-chevron-right"></i></a></li>
+                    <li><a href="index.html#contactID"><strong>contact</strong> <i class="fas fa-chevron-right"></i></a></li>
+                </ul>
+            </nav>
         </header>
 
         <section class="grid-section" id="section-1">
@@ -80,7 +77,45 @@
                 <p>if NO, the Text element keep its position.</p>
             </div>
         </section>
-        
+
+        <footer class="footer">
+            <div class="footer-icons">
+                <table>
+                    <thead>
+                        <th colspan="4">my <strong>socials:</strong> > this is a table 4x3!</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a target="_blank" href="https://github.com/dwtoledo"><i class="fab fa-github-square"></i></a>
+                            </td>
+                            <td>github</td>
+                            <td>
+                                <a target="_blank" href="https://twitter.com/dwtoledo"><i class="fab fa-twitter-square"></i></a>
+                            </td>
+                            <td>twitter</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a target="_blank" href="https://www.instagram.com/dwtoledo/"><i class="fab fa-instagram"></i></a>
+                            </td>
+                            <td>instagram</td>
+                            <td>
+                                <a target="_blank" href="https://linkedin.com/dwtoledo"><i class="fab fa-linkedin"></i></a>
+                            </td>
+                            <td>linkedin</td>
+                        </tr>
+                    </tbody>
+                </table>           
+            </div>
+            <div class="footer-text">
+                <p>
+                    This portfolio page was created during
+                </p>
+                <p><a href="https://www.alura.com.br/imersao-css" target="_blank">CSS immersion course by Alura</a>
+                </p>
+            </div>
+        </footer>       
 
     </body>
 </html>

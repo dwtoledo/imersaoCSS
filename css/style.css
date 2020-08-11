@@ -189,6 +189,10 @@ header {
   gap: 2em;
 }
 
+.left-side {
+  height: 100%;
+}
+
 /*if screen have at least x pixel, the style below will load*/
 @media (min-width: 1000px) {
 
@@ -196,11 +200,10 @@ header {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-}
 
-.left-side {
-  height: 100%;
-  padding-right: 2em;
+    .left-side {
+      padding-right: 2em;
+    }
 }
 
 .left-side h3 {
@@ -836,6 +839,54 @@ fieldset legend {
   }
 }
 
+.calculator_area1 {
+  grid-area: "calculator_area1";
+}
+
+.calculator_area2 {
+  grid-area: "calculator_area2";
+}
+
+.calculator_area3 {
+  grid-area: "calculator_area3";
+}
+
+.calculator_area4 {
+  grid-area: "calculator_area4";
+}
+
+.calculator_area5 {
+  grid-area: "calculator_area5";
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "calculator_area1"
+    "calculator_area2"
+    "calculator_area3"
+    "calculator_area4";
+  justify-items: center;
+  align-items: center;
+  min-width: 250px;
+}
+
+@media (min-width: 550px) {
+  .calculator-buttons {
+    width: 75%;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media (min-width: 750px) {
+  .calculator-buttons {
+    width: 45%;
+    margin: 0 auto 0 auto;
+  }
+}
+
 .form-radios label, .form-radios input {
   margin: 1em 1em;
 }
@@ -870,8 +921,84 @@ fieldset legend {
   box-shadow: darkslategray 3px 3px;
 }
 
+.calculator-button {
+  width: 2em;
+  height: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  background-color: deeppink;
+  color: white;
+  border: darkslategray 1px solid;
+  margin: 1em 0.2em 0 0.2em;
+  transition-duration: 0.4s;
+  border-radius: 30%;
+  box-shadow: darkslategray 3px 3px;
+}
+
+.calculator-function {
+  width: 2em;
+  height: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  background-color: darkslategrey;
+  color: white;
+  border: white 1px solid;
+  margin: 1em 0.2em 0 0.2em;
+  transition-duration: 0.4s;
+  border-radius: 30%;
+  box-shadow: darkslategray 3px 3px;
+}
+
+.calculator-equal {
+  width: calc((2em * 2) + (4 * 0.2em));
+  border-radius: 10px;
+  height: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  background-color: white;
+  color: darkslategray;
+  border: darkslategray 1px solid;
+  margin: 1em 0.2em 0 0.2em;
+  transition-duration: 0.4s;
+  box-shadow: darkslategray 3px 3px;
+}
+
+.calculator-dot,
+.calculator-clear,
+.calculator-parentheses {
+  width: 2em;
+  height: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  background-color: white;
+  color: darkslategray;
+  border: darkslategray 1px solid;
+  margin: 1em 0.2em 0 0.2em;
+  transition-duration: 0.4s;
+  border-radius: 30%;
+  box-shadow: darkslategray 3px 3px;
+}
+
+.input_inline {
+  display: inline-block;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 250px;
+}
+
 @media (max-width: 700px) {
   .calculation-button {
+    font-size: 1.5em;
+  }
+
+  .calculator-button,
+  .calculator-function,
+  .calculator-equal,
+  .calculator-dot,
+  .calculator-clear,
+  .calculator-parentheses {
     font-size: 1.5em;
   }
 }
@@ -881,6 +1008,25 @@ fieldset legend {
   background-color: white;
   color: #4CAF50;
   border: 1px solid #4CAF50;
+}
+
+.calculator-button:hover {
+  background-color: white;
+  color: deeppink;
+  border: 1px solid deeppink;
+}
+
+.calculator-function:hover {
+  background-color: white;
+  color: darkslategrey;
+  border: 1px solid darkslategrey;
+}
+
+.calculator-dot:hover,
+.calculator-clear:hover,
+.calculator-equal:hover,
+.calculator-parentheses:hover {
+  background-color: whitesmoke;
 }
 
 .footer {
