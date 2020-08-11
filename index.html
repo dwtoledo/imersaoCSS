@@ -345,6 +345,8 @@
                     } else {
                         input.value = input.value + text;
                     }
+                } else if (text == calculator.SUBTRACTION && lastChar != calculator.SUBTRACTION) {
+                    input.value = input.value + text;
                 } else if (lastChar == calculator.DIVISION || lastChar == calculator.MULTIPLICATION || lastChar == calculator.SUBTRACTION || lastChar == calculator.SUM || lastChar == calculator.parentheses_LEFT) {
                     alert("Can't add a second operator!")
                 } else {
@@ -414,11 +416,34 @@
                     }
 
                     if (numberOfMatches == expressionLength) {
-                        input.value = input.value + " = " + parseFloat(eval(input.value)).toFixed(2);
-                        alert(eval(input.value));
+
+                        var countParenthesesLeft = 0;
+                        var countParenthesesRight = 0;
+
+                        for (var i=0; i < input.value.length; i++) {
+                            if(input.value.charAt(i) == calculator.parentheses_LEFT) {
+                                countParenthesesLeft++;
+                            }
+                        }
+
+                        for (var i=0; i < input.value.length; i++) {
+                            if(input.value.charAt(i) == calculator.parentheses_RIGHT) {
+                                countParenthesesRight++;
+                            }
+                        }
+
+                        if (countParenthesesLeft != countParenthesesRight) {
+                            alert("Please close all parentheses!");
+                            
+                        } else {
+                            input.value = input.value + " = " + parseFloat(eval(input.value)).toFixed(2);                            
+                        }
+
                     } else {
                         alert("Only dot, number, operator and parentheses are allowed. Try again!");
                         input.value="";
+
+                        eval('1+2*(2+3)*-1')
                     }
                 }
             }
