@@ -31,7 +31,7 @@ function expressionNumber(text) {
     var lastChar = input.value.charAt(input.value.length - 1);
 
     if (lastChar == calculator.parentheses_RIGHT) {
-        alert("Can't enter a number without an operator!")
+        alert("Can't enter a number without an operator!!!")
 
     } else {
         input.value = input.value + text;
