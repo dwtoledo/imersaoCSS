@@ -4,37 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Douglas W Toledo</title>
+    <title>Douglas Toledo - @dwtoledo #HTML #CSS #JavaScript Portifolio </title>
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/885214230e.js" crossorigin="anonymous"></script>
+    <script src="./javascript/operator.js" defer></script>
+    <script src="./javascript/calculator.js" defer></script> 
+    
 </head>
 
 <body>
     
     <header>
         <nav class="menu">
-        <ul>
-            <li><a href="#aboutID"><strong>about</strong> me <i class="fas fa-chevron-right"></i></a></li>
-            <li><a href="#projectsID">vii<strong>projects</strong> <i class="fas fa-chevron-right"></i></a></li>
-            <li><a href="#challengeID"><strong>challenge</strong> <i class="fas fa-chevron-right"></i></a></li>
-            <li><a href="#contactID"><strong>contact</strong> me <i class="fas fa-chevron-right"></i></a></li>      
-        </ul>
+            <ul>
+                <li><a href="#aboutID"><strong>about</strong> me <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#projectsID">vii<strong>projects</strong> <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#challengeID"><strong>challenge</strong> me <i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#contactID">@dwtoledo <strong>contact</strong> <i class="fas fa-chevron-right"></i></a></li>      
+            </ul>
         </nav>
+
         <div class="grid-header">
             <div class="flip-card">
                 <div class="card-profile">
                     <div class="front-profile">
-                        <img class="img-profile" src="img/profile.jpg" alt="Douglas Toledo's profile image">
+                        <img class="img-profile" src="img/profile.jpg" alt="Douglas Toledo profile image">
                     </div>
                     <div class="back-profile">
                         <p>it is <b>me!</b></p>
                     </div>
                 </div>                
             </div>
+            
             <div class="text-profile">
                 <h1 class="site-title">Douglas Toledo</h1>
-                <h2 class="site-subtitle"><b>frontend</b> developer</h2>
+                <h2 class="site-subtitle"><strong>frontend</strong> developer</h2>
             </div>
         </div>
     </header>
@@ -42,12 +48,12 @@
     <section class="about" id="aboutID">
         <h2><strong>about</strong> me</h2>
         <p>
-            I am a <b>frontend development enthusiast</b> after worked in ViiBus and ViiRotas projects. I have +5 years of experience as an entrepreneur at ViiSolutions startup, focused on products and services research & development for people with disabilities.
+            I am a <b>frontend development enthusiast</b> after worked for ViiBus and ViiRotas projects. I have +5 years of experience as an entrepreneur at ViiSolutions startup, focused on products/services research & development for people with visual disabilities.
         </p>
     </section>
 
     <section class="projects" id="projectsID">
-        <h2>vii<b>projects</b></h2>
+        <h2>vii<strong>projects</strong></h2>
         <div class="grid">
             <figure>
                 <a href="https://viibus.com.br" target="_blank"><img class="img-viib" src="img/viib-site.jpg" alt="ViiBus website picture"></a>
@@ -61,12 +67,12 @@
     </section>
 
     <section class="challenge" id="challengeID">
-        <h2><b>challenge</b> me</h2>
+        <h2><strong>challenge</strong> me</h2>
         <div class="challenge-grid">
             <div class="left-side">
                 <h3>
                     <p>
-                        During my CSS immersion, my difficulties <strong>were working with grids, boxes, absolute & relative positions</strong>. And for this reason, I decided to challenge myself replicating the grid image <a href="https://getflywheel.com/wp-content/uploads/2017/08/grid-sketch.jpg" target="_blank">located here</a>.
+                        During my CSS immersion, my difficulties <strong>were working with grids, boxes, absolute & relative positions</strong>. And for this reason, I decided to challenge myself replicating the grid image <a href="./img/grid-sketch.jpg" target="_blank">located here</a>.
                     </p> <br>
                     <p>
                         This challenge was helpful to me, it was a great opportunity to fix some CSS lessons. <strong>I went further adding a back face for each grid</strong>. When you hover a grid area, it will rotate and show its back face content.
@@ -74,7 +80,7 @@
                     <p>
                         <strong>I also prepared a example page</strong>, with more grid, float elements & position examples for you! Visit clicking in below button:
                     </p>
-                    <a href="grids.html" target="_blank"><button class="grids-button"><strong>example </strong>page</button></a>
+                    <a href="grids.html" target="_blank"><button class="grids-button">example page</button></a>
                 </h3>
             </div>
             <div class="right-side">
@@ -171,7 +177,7 @@
     </section>
 
     <section class="javascript" id="javascriptID">
-        <h2><b>javascript</b> integration</h2>
+        <h2><strong>javascript</strong> integration</h2>
         <p>
             Now its time to integrate JS! Let's start with...
         </p>
@@ -180,7 +186,7 @@
 
             <fieldset>
 
-                <legend>2 numbers as user's inputs and a button to call a JS function to calculate then:</legend>
+                <legend>a JS function to calculate 2 inputs:</legend>
 
                 <div class="js-numbers">
                     <label for="number1">number #1:</label>
@@ -202,7 +208,7 @@
 
             <fieldset>
 
-                <legend>How about a calculator?</legend>
+                <legend>how about a calculator now?</legend>
 
                 <textarea readonly class="input_inline" type="text" placeholder="expression" id="expression"></textarea>
                 
@@ -290,7 +296,7 @@
         <div class="footer-icons">
             <table>
                 <thead>
-                    <th colspan="4">my <strong>socials:</strong> > this is a table 4x3!</th>
+                    <th colspan="4"><strong>my socials:</strong> > this is a table 4x3!</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -325,8 +331,6 @@
         </div>
     </footer>
 
-    <script src="./javascript/operator.js"></script>
-    <script src="./javascript/calculator.js"></script> 
-
 </body>
+
 </html>
