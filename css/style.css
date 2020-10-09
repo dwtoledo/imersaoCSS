@@ -9,7 +9,7 @@ body {
   background-image: url('../img/background.jpg');
   background-position: center top;
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
 
@@ -71,9 +71,11 @@ header {
 }
 
 .flip-card:hover .card-profile,
+.flip-card:active .card-profile,
 .flip3:hover .botleftsb-flip,
+.flip3:active .botleftsb-flip,
 .flip4:hover .maincontent-flip,
-.flip7:hover .relatedpost-flip {
+.flip4:active .maincontent-flip {
   transform: rotateY(180deg);
 }
 
@@ -94,36 +96,37 @@ header {
   transform: rotateY(180deg);
 }
 
-.text-profile {
+.profile {
   padding-top: 1.5em;
 }
 
 @media (min-width: 550px) {
-  .text-profile {
+  .profile {
     padding-top: 0px;
     padding-left: 2em;
+    max-width: 400px;
   }
 }
 
-.contacts h2,
-.projects h2,
-.about h2,
-.challenge h2 {
+.challenge h2,
+.contacts h2 {
   font-style: italic;
-  padding-bottom: 1.5em;
   text-decoration: underline;
 }
 
+.contacts h2 {
+  padding-bottom: 1.5em;
+}
+
+.challenge h2,
 .javascript h2 {
   font-style: italic;
   padding-bottom: 0.2em;
   text-decoration: underline;
 }
 
-.text-profile h2 strong,
+.profile h2 strong,
 .contacts h2 strong,
-.projects h2 strong,
-.about h2 strong,
 .challenge h2 strong,
 .javascript h2 strong,
 .footer strong,
@@ -131,105 +134,45 @@ header {
   font-weight: 500;
 }
 
-.about p,
+.challenge p,
 .javascript p {
   text-align: center;
-}
-
-.javascript p {
   font-style: italic;
   padding-bottom: 1.5em;
 }
 
-.about .grid,
-.projects .grid {
-  display: grid;
-}
-
-.grid figure {
-  text-align: center;
-}
-
-.grid figure + figure {
-  padding-top: 1.5em;
-}
-
-.grid figcaption {
-  font-size: 1.2em;
-  font-style: italic;
-}
-
-.figcaption-viib {
-  color: #0070cc;
-}
-
-.figcaption-viis {
-  color: #e48100;
-}
-
-.about,
-.projects,
 .challenge {
-  padding: 2em 2em 0 2em;
+  padding: 0 2em;
+}
+
+.aspect-ratio {
+  position: relative;
+  padding-bottom: 175%; /* 9:16 aspect ratio */
 }
 
 .challenge-grid {
-  display: grid;
-  gap: 2em;
-  grid-auto-rows: auto;
-}
-
-.left-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-}
-
-/*if screen have at least x pixel, the style below will load*/
-@media (min-width: 1000px) {
-
-    .challenge-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-}
-
-.left-side h3 {
-  font-size: 1em;
-  text-align: justify;
-  text-indent: 2.5em;
-}
-
-.left-side h3 p > a {
-  color: #4CAF50;
-  font-size: 1em;
-}
-
-.grids-button {
-  background-color: #4CAF50;
-  border: darkslategray 1px solid;
-  border-radius: 10px;
-  box-shadow: darkslategray 4px 4px;
-  color: whitesmoke;
-  font-style: italic;
-  font-size: 1em;
-  font-weight: 300;
-  height: 3em;
-  left: 50%;
-  margin-top: 2em;
-  position: relative;
-  transform: translateX(-50%);
-  transition-duration: 0.4s;
-  width: 60%;
-}
-
-.grids-button:hover {
-  background-color: whitesmoke;
-  color: #4CAF50;
-}
-
-.right-side {
   display: grid;
-  grid-template-rows: 10vh 55vh 25vh 10vh;
-  height: 100%;
-  row-gap: 2vh;
+  grid-template-rows: 10% 55% 25% 10%;
+  row-gap: 0.5vh;
+}
+
+@media (min-width: 550px) {
+  .aspect-ratio {
+    position: static;
+    margin: 0 auto;
+    max-width: 550px;
+    padding-bottom: 0%;
+  }
+
+  .challenge-grid {
+    position: static;
+    grid-template-rows: 73px 403px 184px 73px;
+  }
 }
 
 .flip1,
@@ -237,8 +180,6 @@ header {
 .flip3,
 .flip4,
 .flip5,
-.flip6,
-.flip7,
 .flip8 {
   position: relative;
 }
@@ -257,10 +198,13 @@ header {
 }
 
 .flip1:hover .header-flip,
+.flip1:active .header-flip,
 .flip2:hover .topleftsb-flip,
+.flip2:active .topleftsb-flip,
 .flip5:hover .extracontent-flip,
-.flip6:hover .relatedimg-flip,
-.flip8:hover .footer-flip {
+.flip5:active .extracontent-flip,
+.flip8:hover .footer-flip,
+.flip8:active .footer-flip  {
   transform: rotateX(180deg);
 }
 
@@ -319,28 +263,22 @@ header {
 }
 
 .right-row2,
-.right-row3,
 .row2-area1,
 .row2-area2 {
   display: grid;
 }
 
-.right-row2,
-.right-row3 {
-  column-gap: 2vh;
+.right-row2 {
+  column-gap: 0.5vh;
 }
 
 .row2-area1,
 .row2-area2 {
-  row-gap: 2vh;
+  row-gap: 0.5vh;
 }
 
 .right-row2 {
   grid-template-columns: 1fr 2fr;
-}
-
-.right-row3 {
-  grid-template-columns: 2fr 1fr;
 }
 
 .row2-area1 {
@@ -385,15 +323,15 @@ header {
 
 .javascript,
 .contacts {
-  padding-top: 2em;
-  padding-right: 2em;
-  padding-left: 2em;
+  margin: 0 2em;
+}
+
+.contacts {
+  margin-top: 2em;
 }
 
 @media (max-width: 550px) {
 
-  .about,
-  .projects,
   .challenge,
   .javascript,
   .contacts {
@@ -401,7 +339,6 @@ header {
     padding-left: 1.5em;
   }
 }
-
 
 .menu {
   background-color: black;
@@ -439,117 +376,38 @@ header {
   text-shadow: 0px 0px 1px whitesmoke;
 }
 
-.site-title {
+.profile-title {
+  font-size: 38px;
   font-weight: 300;
   color: black;
-  text-align: center;
+  text-align: left;
 }
 
-.site-subtitle {
+.profile-subtitle {
+  font-size: 30px;
   font-weight: 300;
   color: black;
-  font-style: italic;
-  text-align: center;
+  text-align: left;
 }
 
-.img-viib {
-  border: 2px solid #0070cc;
-  width: 300px;
-  height: 150px;
-  transition: transform .5s ease;
+.profile-description {
+  font-size: 16px;
+  text-align: left;
 }
 
-.img-viib:active,
-.img-viib:hover {
-  transform: scale(102%);
-}
+@media (max-width: 549px) {
 
-.img-viis {
-  border: 2px solid #e48100;
-  width: 300px;
-  height: 150px;
-  transition: transform .5s ease;
-}
-
-.img-viis:active,
-.img-viis:hover {
-  transform: scale(102%);
-}
-
-/*if screen have at least x pixel, the style below will load*/
-@media (min-width: 500px) {
-
-  .img-viib {
-    width: 450px;
-    height: 225px;
+  .profile-title,
+  .profile-subtitle,
+  .profile-description {
+    text-align: center;
   }
 
-  .img-viis {
-    width: 450px;
-    height: 225px;
-  }
-}
-
-/*if screen have at least x pixel, the style below will load*/
-@media (min-width: 700px) {
-
-  .img-viib {
-    width: 600px;
-    height: 300px;
-  }
-  
-  .img-viis {
-    width: 600px;
-    height: 300px;
-  }
-}
-
-/*if screen have at least x pixel, the style below will load*/
-@media (min-width: 1100px) {
-
-  .img-viib {
-    width: 500px;
-    height: 250px;
-  }
-  
-  .img-viis {
-    width: 500px;
-    height: 250px;
+  .profile-description {
+    padding: 0px 1.5em;
+    margin-top: 1.5em;
   }
 
-  .about .grid,
-  .projects .grid {
-    grid-template-columns: 550px 550px;
-    justify-content: space-around;
-  }
-
-  .grid figure + figure {
-    padding-top: 0px;
-  }
-
-  .grid figcaption {
-    font-size: 1.3em;
-    text-align: left;
-    padding-left: 25px;
-  }
-}
-
-/*if screen have at least x pixel, the style below will load*/
-@media (min-width: 1300px) {
-
-  .img-viib {
-    width: 600px;
-    height: 300px;
-  }
-  
-  .img-viis {
-    width: 600px;
-    height: 300px;
-  }
-  .about .grid,
-  .projects .grid {
-    grid-template-columns: 660px 660px;
-  }
 }
 
 .block-position {
@@ -574,6 +432,7 @@ header {
   .jscalculation {
     width: 80%;
   }
+
 }
 
 .form-main input,
@@ -799,25 +658,31 @@ fieldset legend {
 }
 
 .submit-button:hover,
-.calculation-button:hover {
+.submit-button:active,
+.calculation-button:hover,
+.calculation-button:active {
   background-color: whitesmoke;
   color: #4CAF50;
 }
 
-.calculator-button:hover {
+.calculator-button:hover,
+.calculator-button:active {
   background-color: whitesmoke;
   color: deeppink;
   border: 1px solid deeppink;
 }
 
-.calculator-function:hover {
+.calculator-function:hover,
+.calculator-function:active {
   background-color: whitesmoke;
   color: darkslategrey;
   border: 1px solid darkslategrey;
 }
 
 .calculator-equal:hover,
-.calculator-parentheses:hover {
+.calculator-equal:active,
+.calculator-parentheses:hover,
+.calculator-parentheses:active {
   background-color: darkslategrey;
   color: whitesmoke;
 }

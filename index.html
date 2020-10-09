@@ -7,7 +7,7 @@
     <title>Douglas Toledo - @dwtoledo #HTML #CSS #JavaScript Portifolio </title>
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/885214230e.js" crossorigin="anonymous"></script>
     <script src="./javascript/operator.js" defer></script>
     <script src="./javascript/calculator.js" defer></script> 
@@ -19,13 +19,11 @@
     <header>
         <nav class="menu">
             <ul>
-                <li><a href="#aboutID"><strong>about</strong> me <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#projectsID">vii<strong>projects</strong> <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#challengeID"><strong>challenge</strong> me <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#contactID">@dwtoledo <strong>contact</strong> <i class="fas fa-chevron-right"></i></a></li>      
+                <li><a href="#challengeID">grid <strong>challenge </strong><i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#javascriptID">js <strong>challenge </strong><i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#contactID"><strong>contact</strong> me <i class="fas fa-chevron-right"></i></a></li>      
             </ul>
         </nav>
-
         <div class="grid-header">
             <div class="flip-card">
                 <div class="card-profile">
@@ -38,52 +36,20 @@
                 </div>                
             </div>
             
-            <div class="text-profile">
-                <h1 class="site-title">Douglas Toledo</h1>
-                <h2 class="site-subtitle"><strong>frontend</strong> developer</h2>
+            <div class="profile">
+                <h1 class="profile-title"><strong>Douglas Toledo</strong></h1>
+                <h2 class="profile-subtitle"><strong>frontend</strong> developer</h2>
+                <p class="profile-description">More than 5 years of experience as an entrepreneur at ViiSolutions startup during the ViiBus and ViiRotas projects. <i><a href="https://viisolutions.com.br" target="_blank">+ info</a></i></p>
             </div>
         </div>
     </header>
 
-    <section class="about" id="aboutID">
-        <h2><strong>about</strong> me</h2>
-        <p>
-            I am a <b>frontend development enthusiast</b> after worked for ViiBus and ViiRotas projects. I have +5 years of experience as an entrepreneur at ViiSolutions startup, focused on products/services research & development for people with visual disabilities.
-        </p>
-    </section>
-
-    <section class="projects" id="projectsID">
-        <h2>vii<strong>projects</strong></h2>
-        <div class="grid">
-            <figure>
-                <a href="https://viibus.com.br" target="_blank"><img class="img-viib" src="img/viib-site.jpg" alt="ViiBus website picture"></a>
-                <figcaption>vii<b class="figcaption-viib">bus</b></figcaption>
-            </figure>
-            <figure>
-                <a href="https://viisolutions.com.br" target="_blank"><img class="img-viis" src="img/viis-site.jpg" alt="ViSolutions website picture"></a>
-                <figcaption>vii<b class="figcaption-viis">solutions</b></figcaption>
-            </figure>
-        </div>
-    </section>
-
     <section class="challenge" id="challengeID">
-        <h2><strong>challenge</strong> me</h2>
-        <div class="challenge-grid">
-            <div class="left-side">
-                <h3>
-                    <p>
-                        During my CSS immersion, my difficulties <strong>were working with grids, boxes, absolute & relative positions</strong>. And for this reason, I decided to challenge myself replicating the grid image <a href="./img/grid-sketch.jpg" target="_blank">located here</a>.
-                    </p> <br>
-                    <p>
-                        This challenge was helpful to me, it was a great opportunity to fix some CSS lessons. <strong>I went further adding a back face for each grid</strong>. When you hover a grid area, it will rotate and show its back face content.
-                    </p> <br>
-                    <p>
-                        <strong>I also prepared a example page</strong>, with more grid, float elements & position examples for you! Visit clicking in below button:
-                    </p>
-                    <a href="grids.html" target="_blank"><button class="grids-button">example page</button></a>
-                </h3>
-            </div>
-            <div class="right-side">
+        <h2>grid <strong>challenge</strong></h2>
+        <p>Hover each grid area to discover their content...</p>
+        
+        <div class="aspect-ratio">
+            <div class="challenge-grid">
                 <div class="flip1">
                     <div class="header-flip">
                         <div class="right-row1front">
@@ -140,28 +106,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="right-row3">
-                    <div class="flip6">
-                        <div class="relatedimg-flip">
-                            <div class="row3-area1front">
-                                <h4><i class="fas fa-mouse-pointer"></i></h4>
-                            </div>
-                            <div class="row3-area1back">
-                                <h4>I am the <b>related images</b>!</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flip7">
-                        <div class="relatedpost-flip">
-                            <div class="row3-area2front">
-                                <h4><i class="fas fa-mouse-pointer"></i></h4>
-                            </div>
-                            <div class="row3-area2back">
-                                <h4>I am the <b>related posts</b>!</h4>
-                            </div>                        
-                        </div>
-                    </div>                    
-                </div>
                 <div class="flip8">
                     <div class="footer-flip">
                         <div class="right-row4front">
@@ -174,13 +118,12 @@
                 </div>
             </div>
         </div>
+        
     </section>
 
     <section class="javascript" id="javascriptID">
         <h2><strong>javascript</strong> integration</h2>
-        <p>
-            Now its time to integrate JS! Let's start with...
-        </p>
+        <p>Now its time to integrate JS! Let's start with...</p>
 
         <form class="jscalculation">
 
@@ -248,10 +191,10 @@
             </fieldset>
         </form>        
 
-    </section>
+    </section>    
 
     <section class="contacts" id="contactID">
-        <h2>@dwtoledo <strong>contact</strong></h2>
+        <h2><strong>contact</strong> me</h2>
 
         <form class="contact-form">
 
@@ -332,5 +275,4 @@
     </footer>
 
 </body>
-
 </html>
