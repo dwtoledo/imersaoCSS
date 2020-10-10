@@ -104,7 +104,7 @@ header {
   .profile {
     padding-top: 0px;
     padding-left: 2em;
-    max-width: 400px;
+    max-width: 350px;
   }
 }
 
@@ -138,16 +138,22 @@ header {
 .javascript p {
   text-align: center;
   font-style: italic;
-  padding-bottom: 1.5em;
 }
 
-.challenge {
-  padding: 0 2em;
+.aspect-ratio { 
+  border-radius: 30px;
+  background-color: rgba(128, 128, 128, 0.15);
+  border: 1px solid grey;
 }
 
-.aspect-ratio {
+.grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  padding-bottom: 175%; /* 9:16 aspect ratio */
+  width: 100%;
+  height: 100%;
+  padding-bottom: 140%; /* 9:16 aspect ratio */
 }
 
 .challenge-grid {
@@ -157,21 +163,30 @@ header {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 10% 55% 25% 10%;
+  grid-template-rows: 15% calc(70% - 1.5vh) 15%;
   row-gap: 0.5vh;
 }
 
 @media (min-width: 550px) {
   .aspect-ratio {
-    position: static;
     margin: 0 auto;
-    max-width: 550px;
+    max-width: 80%;
     padding-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .grid-wrapper {
+    position: static;
+    padding-bottom: 0; /* 9:16 aspect ratio */
   }
 
   .challenge-grid {
+    max-width: 550px;
     position: static;
-    grid-template-rows: 73px 403px 184px 73px;
+    grid-template-rows: 73px 403px 184px
   }
 }
 
@@ -216,10 +231,6 @@ header {
 .row22-area1back,
 .row22-area2front,
 .row22-area2back,
-.row3-area1front,
-.row3-area1back,
-.row3-area2front,
-.row3-area2back,
 .right-row4front,
 .right-row4back,
 .right-row1front,
@@ -237,11 +248,9 @@ header {
 .row21-area2front,
 .row22-area1front,
 .row22-area2front,
-.row3-area1front,
-.row3-area2front,
 .right-row4front {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: black solid 1.5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: grey solid 1px;
   color: black;
   font-size: 0.5em;
 }
@@ -249,15 +258,13 @@ header {
 .right-row1back,
 .row21-area1back,
 .row22-area2back,
-.row3-area1back,
 .right-row4back {
   color: whitesmoke;
   transform: rotateX(180deg);
 }
 
 .row21-area2back,
-.row22-area1back,
-.row3-area2back {
+.row22-area1back {
   color: whitesmoke;
   transform: rotateY(180deg);
 }
@@ -309,29 +316,38 @@ header {
   background-color: rgba(82, 62, 94);
 }
 
-.row3-area1back {
-  background-color: rgba(23, 160, 153);
-}
-
-.row3-area2back {
-  background-color: rgba(255, 172, 230);
-}
-
 .right-row4back {
   background-color: rgba(255, 111, 97);
 }
 
-.javascript,
-.contacts {
-  margin: 0 2em;
+.right-row1front,
+.right-row1back {
+  border-radius: 10px 10px 0 0;
 }
 
+.right-row4front,
+.right-row4back {
+  border-radius: 0 0 10px 10px;
+}
+
+.js-area1 {
+  background-color: rgba(128, 128, 128, 0.15);
+  border: 1px solid grey;
+  border-radius: 30px;
+}
+
+.js-area2 {
+  background-color: rgba(128, 128, 128, 0.15);
+  border: 1px solid grey;
+  border-radius: 30px;
+}
+
+.javascript,
 .contacts {
   margin-top: 2em;
 }
 
 @media (max-width: 550px) {
-
   .challenge,
   .javascript,
   .contacts {
@@ -408,6 +424,29 @@ header {
     margin-top: 1.5em;
   }
 
+  .aspect-ratio {
+    background-color: transparent;
+    border: none;
+  }
+
+  .right-row1front,
+  .right-row1back {
+    border-radius: 30px 30px 0 0;
+  }
+
+  .right-row4front,
+  .right-row4back {
+    border-radius: 0 0 30px 30px;
+  }
+
+  .right-row1front,
+  .row21-area1front,
+  .row21-area2front,
+  .row22-area1front,
+  .row22-area2front,
+  .right-row4front {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
 }
 
 .block-position {
@@ -427,12 +466,10 @@ header {
 
 /*if screen have at least x pixel, the style below will load*/
 @media (min-width: 550px) {
-
   .contact-form,
   .jscalculation {
     width: 80%;
   }
-
 }
 
 .form-main input,
@@ -450,18 +487,17 @@ header {
 
 fieldset {
   padding: 1em;
-  margin: 1em 0 0 0;
 }
 
-fieldset legend {
-  font-weight: 400;
-  text-align: left;
+fieldset:first-child {
+  margin-bottom: 1em;
 }
 
 .js-numbers label,
 .js-numbers input {
   display: block;
-  
+  font-size: 0.8em;
+  font-weight: 400;
 }
 
 .js-numbers input {
@@ -491,9 +527,9 @@ fieldset legend {
 .js-numbers input {
   background-color: rgba(255, 255, 255, 0.8);
   border: solid 1px gray;
-  padding: 0.5em;
+  padding: 0.3em;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1em;
   border-radius: 10px;
 }
 
@@ -546,7 +582,7 @@ fieldset legend {
 
 @media (min-width: 750px) {
   .calculator-buttons {
-    width: 45%;
+    width: %;
   }
 }
 
@@ -576,7 +612,6 @@ fieldset legend {
 
 /*if screen have at least x pixel, the style below will load*/
 @media (min-width: 1000px) {
-
   .submit-button {
     width: 20vw;
   }
@@ -642,6 +677,7 @@ fieldset legend {
   border-radius: 10px;
   width: 250px;
   border: 1px solid gray;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 @media (max-width: 700px) {
@@ -685,6 +721,56 @@ fieldset legend {
 .calculator-parentheses:active {
   background-color: darkslategrey;
   color: whitesmoke;
+}
+
+@media (min-width: 1280px) {
+  .projects {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .operator-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .operator-selection label {
+    font-size: 0.8em;
+    font-weight: 400;
+  }
+
+  .calculation-button {
+    margin: 0;
+  }
+
+  .calculation-button:first-child {
+    margin-left: 1em;
+  }
+
+  .javascript {
+    margin: 0 2em 0 0;
+  }
+
+  .jscalculation {
+    width: 100%;
+  }
+
+  .aspect-ratio {
+    padding: 1em;
+    max-width: 50vw;
+    width: 50vw;
+    margin: 0 1em 0 2em;
+  }
+  .aspect-ratio p { 
+    margin-bottom: 1em;
+  }
+
+  .challenge-grid {
+    max-width: 550px;
+    margin: 0 auto;
+    height: 100%;
+  }
 }
 
 .footer {
