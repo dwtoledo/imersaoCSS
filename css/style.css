@@ -108,14 +108,9 @@ header {
   }
 }
 
-.challenge h2,
-.contacts h2 {
+.challenge h2 {
   font-style: italic;
   text-decoration: underline;
-}
-
-.contacts h2 {
-  padding-bottom: 1.5em;
 }
 
 .challenge h2,
@@ -126,7 +121,6 @@ header {
 }
 
 .profile h2 strong,
-.contacts h2 strong,
 .challenge h2 strong,
 .javascript h2 strong,
 .footer strong,
@@ -169,8 +163,7 @@ header {
 
 @media (min-width: 550px) {
   .aspect-ratio {
-    margin: 0 auto;
-    max-width: 80%;
+    margin: 0 5%;
     padding-bottom: 0%;
     display: flex;
     flex-direction: column;
@@ -188,6 +181,7 @@ header {
     position: static;
     grid-template-rows: 73px 403px 184px
   }
+
 }
 
 .flip1,
@@ -342,17 +336,20 @@ header {
   border-radius: 30px;
 }
 
-.javascript,
-.contacts {
-  margin-top: 2em;
-}
-
-@media (max-width: 550px) {
+@media (max-width: 549px) {
   .challenge,
-  .javascript,
-  .contacts {
+  .javascript {
     padding-right: 1.5em;
     padding-left: 1.5em;
+  }
+
+  .js-area1,
+  .js-area2 {
+    padding: 1em;
+  }
+
+  .js-area2 {
+    margin-top: 1em;
   }
 }
 
@@ -452,44 +449,27 @@ header {
   display: block;
 }
 
-.contact-form,
 .jscalculation {
   position: relative;
   font-weight: 300;
   font-size: 1em;
   text-align: center;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /*if screen have at least x pixel, the style below will load*/
 @media (min-width: 550px) {
-  .contact-form,
   .jscalculation {
-    width: 80%;
+    margin: 0 5%;
   }
-}
 
-.form-main input,
-.form-main textarea {
-  background-color: rgba(255, 255, 255, 0.3);
-  border: solid 1px gray;
-  left: 50%;
-  margin: 0.7em 0;
-  padding: 0.7em;
-  position: relative;
-  transform: translateX(-50%);
-  width: 80%;
-  border-radius: 5px;
-}
+  .js-area1,
+  .js-area2 {
+    padding: 1em;
+  }
 
-fieldset {
-  padding: 1em;
-}
-
-fieldset:first-child {
-  margin-bottom: 1em;
+  .js-area2 {
+    margin-top: 1em;
+  }
 }
 
 .js-numbers label,
@@ -581,38 +561,7 @@ fieldset:first-child {
 
 @media (min-width: 750px) {
   .calculator-buttons {
-    width: 45%;
-  }
-}
-
-.form-radios label, .form-radios input {
-  margin: 1em 1em;
-}
-
-.form-subscribe select {
-  font-size: 0.7em;
-  padding: 0.5em;
-  border-radius: 5px;
-  border: gray 1px solid;
-}
-
-.submit-button {
-  margin-top: 1.5em;
-  width: 100%;
-  height: 3em;
-  font-size: 1em;
-  background-color: #4CAF50;
-  color: whitesmoke;
-  transition-duration: 0.4s;
-  box-shadow: darkslategray 4px 4px;
-  border: darkslategray 1px solid;
-  border-radius: 10px;
-}
-
-/*if screen have at least x pixel, the style below will load*/
-@media (min-width: 1000px) {
-  .submit-button {
-    width: 20vw;
+    width: 60%;
   }
 }
 
@@ -747,20 +696,13 @@ fieldset:first-child {
     margin-left: 1em;
   }
 
+  .challenge,
   .javascript {
-    margin: 0 2em 0 0;
-  }
-
-  .jscalculation {
-    width: 100%;
-  }
-
-  .aspect-ratio {
-    padding: 1em;
-    max-width: 50vw;
     width: 50vw;
-    margin: 0 1em 0 2em;
+    margin: 0 auto;
   }
+
+  .javascript p,
   .aspect-ratio p { 
     margin-bottom: 1em;
   }
@@ -770,6 +712,11 @@ fieldset:first-child {
     margin: 0 auto;
     height: 100%;
   }
+}
+
+.challenge,
+.javascript {
+  margin-top: 2em;
 }
 
 .footer {
