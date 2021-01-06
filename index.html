@@ -39,9 +39,8 @@
             
             <div class="profile">
                 <h1 class="profile-title"><strong>Douglas Toledo</strong></h1>
-                <h2 class="profile-subtitle"><strong>frontend</strong> developer</h2>
-                <h2 class="profile-subtitle"><strong>streamer</strong> on Twitch</h2>
-                <p class="profile-description">after work +5 years as entrepreneur at ViiSolutions startup. <i><a href="https://viisolutions.com.br" target="_blank">+ info</a></i></p>
+                <h2 class="profile-subtitle"><strong>frontend</strong> developer <strong>streamer</strong> on twitch</h2>
+                <p class="profile-description">after work as entrepreneur! <i><a href="https://viisolutions.com.br" target="_blank">+ info</a></i></p>
             </div>
         </div>
     </header>
@@ -49,9 +48,9 @@
     <main class="projects">
 
         <section class="challenge" id="challengeID">
-            <h2>grid <strong>challenge</strong></h2>
             
             <div class="aspect-ratio">
+                <h2><strong>grid challenge</strong></h2>
                 <p>Hover the areas to discover its content</p>
 
                 <div class="grid-wrapper">
@@ -132,72 +131,84 @@
         </section>
     
         <section class="javascript" id="javascriptID">
-            <h2><strong>javascript</strong> integration</h2>
+            
     
             <form class="jscalculation">
     
                 <fieldset class="js-area1">
+                    <h2><strong>javascript integration</strong></h2>
+                    <p>interact with the page to calculate two inputs:</p>
+                    
 
-                    <p>JS functions to calculate 2 inputs</p>
-
-                    <div class="js-numbers">
-                        <label for="number1">input#1:</label>
-                        <input type="number" id="number1" value="0" required>
-                        <label for="number2">input#2:</label>
-                        <input type="number" id="number2" value="0" required>
-                    </div>
-                    <div class="operator-selection">
-                        <label>select the operator:</label>
-    
-                        <div class>
-                            <button type="button" class="calculation-button" onclick="calculate(operators.SUM)">+</button>
-                            <button type="button" class="calculation-button" onclick="calculate(operators.SUBTRACTION)">-</button>
-                            <button type="button" class="calculation-button" onclick="calculate(operators.MULTIPLICATION)">x</button>
-                            <button type="button" class="calculation-button" onclick="calculate(operators.DIVISION)">÷</button>
+                    <div class="border">
+                            <div class="js-numbers">
+                            <label for="number1">input#1:</label>
+                            <input type="number" id="number1" value="0" required>
+                            <label for="number2">input#2:</label>
+                            <input type="number" id="number2" value="0" required>
                         </div>
-
+                        <div class="operator-selection">
+                            <label>select the operator:</label>
+        
+                            <div class>
+                                <button type="button" class="calculation-button" onclick="calculate(operators.SUM)">+</button>
+                                <button type="button" class="calculation-button" onclick="calculate(operators.SUBTRACTION)">-</button>
+                                <button type="button" class="calculation-button" onclick="calculate(operators.MULTIPLICATION)">x</button>
+                                <button type="button" class="calculation-button" onclick="calculate(operators.DIVISION)">÷</button>
+                            </div>
+    
+                        </div>                        
                     </div>
                     
                 </fieldset>
     
                 <fieldset class="js-area2">
+
     
-                    <p>How about a calculator now?</p>
-    
-                    <textarea readonly class="input_inline" type="text" placeholder="expression" id="expression"></textarea>
                     
-                    <div class="calculator-buttons">
-    
-                        <div class="calculator_area1">
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.SEVEN)">7</button>
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.EIGHT)">8</button>
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.NINE)">9</button>
-                            <button type="button" class="calculator-function" onclick="expressionOperator(calculator.MULTIPLICATION)">x</button>
+
+                    <div class="border">
+
+                        <p>how about a calculator now?</p>
+
+                        <textarea readonly class="input_inline" type="text" placeholder="expression" id="expression"></textarea>
+                    
+                        <div class="calculator-buttons">
+        
+                            <div class="calculator_area1">
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.SEVEN)">7</button>
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.EIGHT)">8</button>
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.NINE)">9</button>
+                                <button type="button" class="calculator-function" onclick="expressionOperator(calculator.MULTIPLICATION)">x</button>
+                            </div>
+                            <div class="calculator_area2">
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.FOUR)">4</button>
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.FIVE)">5</button>
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.SIX)">6</button>
+                                <button type="button" class="calculator-function" onclick="expressionOperator(calculator.SUBTRACTION)">-</button>
+                            </div>
+                            <div class="calculator_area3">
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.ONE)">1</button>
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.TWO)">2</button>
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.THREE)">3</button>
+                                <button type="button" class="calculator-function" onclick="expressionOperator(calculator.SUM)">+</button>
+                            </div>
+                            <div class="calculator_area4">
+                                <button type="button" class="calculator-function" onclick="expressionClearAll()">C</button>
+                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.ZERO)">0</button>
+                                <button type="button" class="calculator-function" onclick="expressionDot(calculator.DOT)">.</button>
+                                <button type="button" class="calculator-function" onclick="expressionOperator(calculator.DIVISION)">÷</button>
+                            </div>
+                            <div class="calculator_area5">
+                                <button type="button" class="calculator-equal" onclick="expressionCalc()">=</button>
+                                <button type="button" class="calculator-parentheses" onclick="expressionParenthesesLeft(calculator.parentheses_LEFT)">(</button>
+                                <button type="button" class="calculator-parentheses" onclick="expressionParenthesesRight(calculator.parentheses_RIGHT)">)</button>
+                            </div>
                         </div>
-                        <div class="calculator_area2">
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.FOUR)">4</button>
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.FIVE)">5</button>
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.SIX)">6</button>
-                            <button type="button" class="calculator-function" onclick="expressionOperator(calculator.SUBTRACTION)">-</button>
-                        </div>
-                        <div class="calculator_area3">
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.ONE)">1</button>
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.TWO)">2</button>
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.THREE)">3</button>
-                            <button type="button" class="calculator-function" onclick="expressionOperator(calculator.SUM)">+</button>
-                        </div>
-                        <div class="calculator_area4">
-                            <button type="button" class="calculator-function" onclick="expressionClearAll()">C</button>
-                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.ZERO)">0</button>
-                            <button type="button" class="calculator-function" onclick="expressionDot(calculator.DOT)">.</button>
-                            <button type="button" class="calculator-function" onclick="expressionOperator(calculator.DIVISION)">÷</button>
-                        </div>
-                        <div class="calculator_area5">
-                            <button type="button" class="calculator-equal" onclick="expressionCalc()">=</button>
-                            <button type="button" class="calculator-parentheses" onclick="expressionParenthesesLeft(calculator.parentheses_LEFT)">(</button>
-                            <button type="button" class="calculator-parentheses" onclick="expressionParenthesesRight(calculator.parentheses_RIGHT)">)</button>
-                        </div>
+
                     </div>
+    
+                    
     
                 </fieldset>
             </form>        
@@ -208,41 +219,58 @@
 
     <footer class="footer">
         
-        <div class="footer-twitch">
-            <p><strong>twitch</strong> > @dwtoledo</p><br>
+        <div class="footer-container">
 
-            <iframe src="https://player.twitch.tv/?autoplay=false&collection=kwtq1GYnTxbXHw&parent=dwtoledo.github.io&video=831207030" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+            <div class="footer-twitch">
+                <div class="footer-twitch--title">
+                    <p><strong>twitch</strong></p><br>
+                </div>                
+    
+                <iframe src="https://player.twitch.tv/?autoplay=false&collection=kwtq1GYnTxbXHw&parent=dwtoledo.github.io&video=831207030" frameborder="0" allowfullscreen="true" scrolling="no" height="100%" width="100%"></iframe>
+    
+            </div>
+    
+            <div class="footer-icons">
+                <table>
+                    <thead>
+                        <th colspan="4"><strong>socials</strong></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a target="_blank" href="https://github.com/dwtoledo"><i class="fab fa-github-square"></i></a>
+                            </td>
+                            <td>github</td>
+                            <td>
+                                <a target="_blank" href="https://twitter.com/dwtoledo"><i class="fab fa-twitter-square"></i></a>
+                            </td>
+                            <td>twitter</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a target="_blank" href="https://www.instagram.com/dwtoledo/"><i class="fab fa-instagram"></i></a>
+                            </td>
+                            <td>instagram</td>
+                            <td>
+                                <a target="_blank" href="https://www.linkedin.com/in/dwtoledo"><i class="fab fa-linkedin"></i></a>
+                            </td>
+                            <td>linkedin</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a target="_blank" href="https://www.instagram.com/dwtoledo/"><i class="fab fa-facebook"></i></a>
+                            </td>
+                            <td>facebook</td>
+                            <td>
+                                <a target="_blank" href="https://www.linkedin.com/in/dwtoledo"><i class="fab fa-twitch"></i></a>
+                            </td>
+                            <td>twitch</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>           
+            </div>
 
-        </div>
-
-        <div class="footer-icons">
-            <table>
-                <thead>
-                    <th colspan="4"><strong>my socials</strong> > @dwtoledo</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a target="_blank" href="https://github.com/dwtoledo"><i class="fab fa-github-square"></i></a>
-                        </td>
-                        <td>github</td>
-                        <td>
-                            <a target="_blank" href="https://twitter.com/dwtoledo"><i class="fab fa-twitter-square"></i></a>
-                        </td>
-                        <td>twitter</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a target="_blank" href="https://www.instagram.com/dwtoledo/"><i class="fab fa-instagram"></i></a>
-                        </td>
-                        <td>instagram</td>
-                        <td>
-                            <a target="_blank" href="https://www.linkedin.com/in/dwtoledo"><i class="fab fa-linkedin"></i></a>
-                        </td>
-                        <td>linkedin</td>
-                    </tr>
-                </tbody>
-            </table>           
         </div>
         
         <div class="footer-text">
