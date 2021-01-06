@@ -134,7 +134,7 @@ header {
 .grid-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
   width: 100%;
   height: 100%;
@@ -154,11 +154,10 @@ header {
 
 @media (min-width: 550px) {
   .aspect-ratio {
-    padding-bottom: 0%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 1em;
+    align-items: flex-end;
+    margin: 3em 3em 2em 0;
   }
 
   .grid-wrapper {
@@ -243,13 +242,13 @@ header {
 .row21-area1back,
 .row22-area2back,
 .right-row4back {
-  color: whitesmoke;
+  color: white;
   transform: rotateX(180deg);
 }
 
 .row21-area2back,
 .row22-area1back {
-  color: whitesmoke;
+  color: white;
   transform: rotateY(180deg);
 }
 
@@ -308,7 +307,30 @@ header {
   display: flex;
   flex-direction: column;
   border: none;
-  align-items: center;
+  align-items: flex-start;
+  border-left: 3px solid;
+  padding-left: 3em;
+  border-image: 
+    linear-gradient(
+      to bottom,
+      #9708CC, 
+      #6696eb
+    ) 1 100%;
+}
+
+.skill-tags {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-left: 3px solid;
+  padding-left: 3em;
+  border-image: 
+    linear-gradient(
+      to bottom,
+      #9708CC, 
+      #6696eb
+    ) 1 100%;
 }
 
 @media (max-width: 549px) {
@@ -318,8 +340,9 @@ header {
     padding-left: 1.5em;
   }
 
-  .js-area {
-    padding: 1em;
+  .js-area,
+  .skill-tags {
+    margin: 3em 0 1em 0;
   }
 }
 
@@ -333,7 +356,7 @@ header {
 
 .footer-text a,
 .menu a {
-  color: whitesmoke;
+  color: white;
   text-decoration: none;
 }
 
@@ -356,7 +379,7 @@ header {
 .footer a:hover,
 .footer a:active {
   text-decoration: none;
-  text-shadow: 0px 0px 1px whitesmoke;
+  text-shadow: 0px 0px 1px white;
 }
 
 .profile-title {
@@ -416,8 +439,9 @@ header {
 /*if screen have at least x pixel, the style below will load*/
 @media (min-width: 550px) {
 
+  .skill-tags,
   .js-area {
-    padding: 1em;
+    margin: 3em 0 0em 0em;
   }
 }
 
@@ -454,7 +478,7 @@ header {
 
 .js-numbers input {
   background-color: rgba(255, 255, 255, 0.8);
-  border: solid 1px gray;
+  border: solid 1px black;
   padding: 0.3em;
   text-align: center;
   font-size: 1em;
@@ -495,7 +519,7 @@ header {
     "calculator_area2"
     "calculator_area3"
     "calculator_area4";
-  justify-items: center;
+  justify-items: flex-start;
   align-items: center;
   min-width: 250px;
 }
@@ -503,7 +527,6 @@ header {
 @media (min-width: 550px) {
   .calculator-buttons {
     width: 75%;
-    margin: 0 auto;
   }
 }
 
@@ -513,39 +536,37 @@ header {
   }
 }
 
-.calculator-button,
-.calculator-function {
-  box-shadow: #3378ee 3px 3px;
-  color: whitesmoke;
+.calculator-function,
+.calculator-button {
+  box-shadow: black 3px 3px;
+  color: white;
   font-size: 1em;
   height: 2em;
   margin: 1em 0.2em 0 0.2em;
-  transition-duration: 0.4s;
   width: 2em;
 }
 
-.calculator-button {
-  border: #3378ee 1px solid;
-}
-
 .calculator-button  {
-  background-image: linear-gradient( -45deg, #44cbff 10%, #7b49dd 100%);
+  color: black;
+  background-color: white;
+  border: 1px solid black;
 }
 
 .calculator-function {
-  background-color: black;
+  box-shadow: rgb(37, 37, 37) 3px 3px;
+  background-color: rgb(37, 37, 37);
   border: none;
 }
 
 .calculator-parentheses,
 .calculator-equal {
   height: 2em;
-  color: #3378ee;
-  border: #3378ee 1px solid;
+  color: rgb(37, 37, 37);
+  border: rgb(37, 37, 37) 1px solid;
   margin: 1em 0.2em 0 0.2em;
-  transition-duration: 0.4s;
   font-size: 1em;
-  box-shadow: #3378ee 3px 3px;
+  box-shadow: rgb(37, 37, 37) 3px 3px;
+  background-color: white;
 }
 
 .calculator-equal {
@@ -562,7 +583,7 @@ header {
   font-size: 1.5em;
   font-weight: bold;
   width: 250px;
-  border: 1px solid gray;
+  border: 1px solid black;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -578,34 +599,16 @@ header {
 .calculator-button:hover,
 .calculator-button:active,
 .submit-button:hover,
-.submit-button:active {
-  color: black;
-  border: 1px solid black;
-  box-shadow: black 3px 3px;
-  background-image: linear-gradient( -45deg, white 10%, white 100%);
-}
-
+.submit-button:active,
 .calculator-function:hover,
-.calculator-function:active {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  box-shadow: black 3px 3px;
-
-}
-
+.calculator-function:active,
 .calculator-equal:hover,
 .calculator-equal:active,
 .calculator-parentheses:hover,
 .calculator-parentheses:active {
-  color: black;
-  box-shadow: black 3px 3px;
-  border: 1px solid black;
-}
-
-.projects {
-  border-top: 1px solid #3378ee;
-  border-bottom: 1px solid #3378ee;
+  border: 1px solid #5d4ee0;
+  background-image: radial-gradient(#54a3f4, #7063e4);
+  color: white;
 }
 
 @media (min-width: 1280px) {
@@ -631,21 +634,47 @@ header {
     margin: 0 auto;
   }
 
-  .javascript p,
+  .js-area p,
   .aspect-ratio p { 
     margin-bottom: 1em;
   }
 
   .challenge-grid {
     max-width: 550px;
-    margin: 0 auto;
     height: 100%;
   }
 }
 
+.tags {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  margin-top: 1em;
+  justify-content: flex-start;
+}
+
+.tags li {
+  background-color: white;
+  color: black;
+  padding: 6px;
+  font-size: 0.8em;
+  margin: 0 10px;
+  box-shadow: black 3px 3px;
+  border: 1px solid black;
+  font-weight: 500;
+}
+
+.tags li:first-child {
+  margin-left: 0;
+}
+
+.tags li:last-child {
+  margin-right: 0;
+}
+
 .footer {
   font-size: 0.7em;
-  color: whitesmoke;
+  color: white;
   font-weight: 300;
   text-align: center;
 }
