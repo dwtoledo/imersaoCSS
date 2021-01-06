@@ -211,20 +211,19 @@
         <div class="footer-twitch">
             <p><strong>twitch</strong> > @dwtoledo</p>
             
-            <!-- Add a placeholder for the Twitch embed -->
-            <div id="twitch-embed"></div>
-
-            <!-- Load the Twitch embed script -->
-            <script src="https://player.twitch.tv/js/embed/v1.js"></script>
-
-            <!-- Create a Twitch.Player object. This will render within the placeholder div -->
+            <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+            <div id="SamplePlayerDivID"></div>
             <script type="text/javascript">
-            new Twitch.Player("twitch-embed", {
-                collection: "kwtq1GYnTxbXHw",
-                video: "videoId"
-            });
+            var options = {
+                width: 854,
+                height: 480,
+                channel: "dwtoledo",
+                // only needed if your site is also embedded on embed.example.com and othersite.example.com
+                parent: ["dwtoledo.github.io/portfolio"]
+            };
+            var player = new Twitch.Player("SamplePlayerDivID", options);
+            player.setVolume(0.5);
             </script>
-
         </div>
 
         <div class="footer-icons">
