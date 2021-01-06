@@ -724,7 +724,6 @@ header {
   color: whitesmoke;
   font-weight: 300;
   text-align: center;
-  background-color: black;
   margin-top: 3em;
   padding: 2em 0 0.5em;
 }
@@ -733,7 +732,8 @@ header {
   text-align: center;
   font-size: 1em;
   color: whitesmoke;
-  margin-bottom: 2em;
+  padding-bottom: 2em;
+  background-color: black;
 }
 
 .footer-icons table {
@@ -757,6 +757,14 @@ header {
   font-weight: 300;
   font-style: italic;
   font-size: 1.5em;
+}
+
+.footer-twitch {
+  color: black;
+}
+
+.footer-text {
+  background-color: black;
 }
 
 .footer-text a {
