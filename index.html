@@ -222,12 +222,22 @@
         <div class="footer-container">
 
             <div class="footer-twitch">
-                <div class="footer-twitch--title">
-                    <p><strong>latest stream on twitch</strong></p><br>
-                </div>                
-    
-                <iframe src="https://player.twitch.tv/?autoplay=false&channel=dwtoledo&parent=dwtoledo.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="360" width="640"></iframe>
-    
+                <p><strong>latest stream on twitch</strong></p><br>
+
+                <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+                <div id="SamplePlayerDivID"></div>
+                <script type="text/javascript">
+                var options = {
+                    width: 640,
+                    height: 360,
+                    autoplay: false,
+                    channel: "dwtoledo",
+                    // only needed if your site is also embedded on embed.example.com and othersite.example.com
+                    parent: ["dwtoledo.github.io"]
+                };
+                var player = new Twitch.Player("SamplePlayerDivID", options);
+                player.setVolume(0.5);
+                </script>
             </div>
     
             <div class="footer-icons">
