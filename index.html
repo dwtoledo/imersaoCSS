@@ -51,7 +51,7 @@
             
             <div class="aspect-ratio">
                 <h2><strong>grid challenge</strong></h2>
-                <p>Hover the areas to discover its content</p>
+                <p>hover the areas to discover its content</p>
 
                 <div class="grid-wrapper">
 
@@ -135,80 +135,45 @@
     
             <form class="jscalculation">
     
-                <fieldset class="js-area1">
+                <fieldset class="js-area">
+
                     <h2><strong>javascript integration</strong></h2>
-                    <p>interact with the page to calculate two inputs:</p>
-                    
+                    <p>how about a calculator?</p>
 
-                    <div class="border">
-                            <div class="js-numbers">
-                            <label for="number1">input#1:</label>
-                            <input type="number" id="number1" value="0" required>
-                            <label for="number2">input#2:</label>
-                            <input type="number" id="number2" value="0" required>
+                    <textarea readonly class="input_inline" type="text" placeholder="expression" id="expression"></textarea>
+                
+                    <div class="calculator-buttons">
+    
+                        <div class="calculator_area1">
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.SEVEN)">7</button>
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.EIGHT)">8</button>
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.NINE)">9</button>
+                            <button type="button" class="calculator-function" onclick="expressionOperator(calculator.MULTIPLICATION)">x</button>
                         </div>
-                        <div class="operator-selection">
-                            <label>select the operator:</label>
-        
-                            <div class>
-                                <button type="button" class="calculation-button" onclick="calculate(operators.SUM)">+</button>
-                                <button type="button" class="calculation-button" onclick="calculate(operators.SUBTRACTION)">-</button>
-                                <button type="button" class="calculation-button" onclick="calculate(operators.MULTIPLICATION)">x</button>
-                                <button type="button" class="calculation-button" onclick="calculate(operators.DIVISION)">÷</button>
-                            </div>
-    
-                        </div>                        
-                    </div>
-                    
-                </fieldset>
-    
-                <fieldset class="js-area2">
-
-    
-                    
-
-                    <div class="border">
-
-                        <p>how about a calculator now?</p>
-
-                        <textarea readonly class="input_inline" type="text" placeholder="expression" id="expression"></textarea>
-                    
-                        <div class="calculator-buttons">
-        
-                            <div class="calculator_area1">
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.SEVEN)">7</button>
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.EIGHT)">8</button>
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.NINE)">9</button>
-                                <button type="button" class="calculator-function" onclick="expressionOperator(calculator.MULTIPLICATION)">x</button>
-                            </div>
-                            <div class="calculator_area2">
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.FOUR)">4</button>
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.FIVE)">5</button>
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.SIX)">6</button>
-                                <button type="button" class="calculator-function" onclick="expressionOperator(calculator.SUBTRACTION)">-</button>
-                            </div>
-                            <div class="calculator_area3">
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.ONE)">1</button>
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.TWO)">2</button>
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.THREE)">3</button>
-                                <button type="button" class="calculator-function" onclick="expressionOperator(calculator.SUM)">+</button>
-                            </div>
-                            <div class="calculator_area4">
-                                <button type="button" class="calculator-function" onclick="expressionClearAll()">C</button>
-                                <button type="button" class="calculator-button" onclick="expressionNumber(calculator.ZERO)">0</button>
-                                <button type="button" class="calculator-function" onclick="expressionDot(calculator.DOT)">.</button>
-                                <button type="button" class="calculator-function" onclick="expressionOperator(calculator.DIVISION)">÷</button>
-                            </div>
-                            <div class="calculator_area5">
-                                <button type="button" class="calculator-equal" onclick="expressionCalc()">=</button>
-                                <button type="button" class="calculator-parentheses" onclick="expressionParenthesesLeft(calculator.parentheses_LEFT)">(</button>
-                                <button type="button" class="calculator-parentheses" onclick="expressionParenthesesRight(calculator.parentheses_RIGHT)">)</button>
-                            </div>
+                        <div class="calculator_area2">
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.FOUR)">4</button>
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.FIVE)">5</button>
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.SIX)">6</button>
+                            <button type="button" class="calculator-function" onclick="expressionOperator(calculator.SUBTRACTION)">-</button>
                         </div>
-
-                    </div>
-    
-                    
+                        <div class="calculator_area3">
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.ONE)">1</button>
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.TWO)">2</button>
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.THREE)">3</button>
+                            <button type="button" class="calculator-function" onclick="expressionOperator(calculator.SUM)">+</button>
+                        </div>
+                        <div class="calculator_area4">
+                            <button type="button" class="calculator-function" onclick="expressionClearAll()">C</button>
+                            <button type="button" class="calculator-button" onclick="expressionNumber(calculator.ZERO)">0</button>
+                            <button type="button" class="calculator-function" onclick="expressionDot(calculator.DOT)">.</button>
+                            <button type="button" class="calculator-function" onclick="expressionOperator(calculator.DIVISION)">÷</button>
+                        </div>
+                        <div class="calculator_area5">
+                            <button type="button" class="calculator-equal" onclick="expressionCalc()">=</button>
+                            <button type="button" class="calculator-parentheses" onclick="expressionParenthesesLeft(calculator.parentheses_LEFT)">(</button>
+                            <button type="button" class="calculator-parentheses" onclick="expressionParenthesesRight(calculator.parentheses_RIGHT)">)</button>
+                        </div>
+                    </div>                    
     
                 </fieldset>
             </form>        
@@ -285,9 +250,9 @@
         
         <div class="footer-text">
             <p>
-                This portfolio page was created during
+                This portfolio page
             </p>
-            <p><a href="https://www.alura.com.br/imersao-css" target="_blank">CSS immersion course by Alura</a>
+            <p><a href="https://www.alura.com.br/imersao-css" target="_blank">was created by me!</a>
             </p>
         </div>
     </footer>
