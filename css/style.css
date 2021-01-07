@@ -152,7 +152,7 @@ header {
   row-gap: 0.5vh;
 }
 
-@media (min-width: 550px) {
+@media (min-width: 414px) {
   .aspect-ratio {
     display: flex;
     flex-direction: column;
@@ -333,11 +333,42 @@ header {
     ) 1 100%;
 }
 
-@media (max-width: 549px) {
-  .challenge,
+@media (max-width: 414px) {
+  .skill-tags,
+  .js-area {
+    padding-left: 1em;
+  }
+
+  .js-area > h2 {
+    text-align: left;
+  }
+
+  .js-area > p {
+    margin-bottom: 1em;
+  }
+
+  .aspect-ratio > h2 {
+    text-align: left;
+    font-size: 32px;
+  }
+
+  .js-area > h2,
+  .skill-tags > h2 {
+    font-size: 32px;
+  }
+
+  .challenge {
+    padding-top: 1.5em;
+  }
+}
+
+@media (max-width: 414px) {
+  .challenge {
+    padding: 1.5em 1.5em 0 1.5em;
+
+  }
   .javascript {
-    padding-right: 1.5em;
-    padding-left: 1.5em;
+    padding: 0 1.5em 1.5em 1.5em;
   }
 
   .js-area,
@@ -648,6 +679,7 @@ header {
 .tags {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin-top: 1em;
   justify-content: flex-start;
@@ -701,6 +733,29 @@ header {
   align-items: flex-start;
 }
 
+/* fazer funcionar para celular */
+@media (max-width: 414px) {
+  .footer-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #SamplePlayerDivID > iframe {
+    width: 90vw;
+    height: calc(90vw*0.5625);
+  }
+
+  .footer-icons {
+    padding: 5vw;
+    background-image: linear-gradient( -45deg, #43CBFF 10%, #9708CC 100%);
+  }
+
+  .tags li {
+    margin: 0px 10px 10px 0px;
+  }
+}
+
 .footer-twitch p,
 .footer-icons a {
   color: white;
@@ -735,7 +790,23 @@ header {
   padding: 3em;
 }
 
+@media (max-width: 414px) {
+  .footer-twitch {
+    padding: 5vw;
+  }
+
+  .footer-icons th,
+  .footer-twitch > p {
+    font-size: 32px;
+  }
+
+  .footer-icons td {
+    font-size: 14px;
+  }
+}
+
 .footer-text {
+  width: 100vw;
   background-color: black;
   padding: 1em 0;
   border-top: white 1px solid;
