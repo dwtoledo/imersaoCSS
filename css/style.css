@@ -152,12 +152,11 @@ header {
   row-gap: 0.5vh;
 }
 
-@media (min-width: 414px) {
+@media (min-width: 769px) {
   .aspect-ratio {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: 3em 3em 2em 0;
   }
 
   .grid-wrapper {
@@ -170,8 +169,14 @@ header {
     position: static;
     grid-template-rows: 73px 403px 184px
   }
-
 }
+
+@media (min-width: 1281px) {
+  .aspect-ratio {
+    margin: 3em 3em 2em 0;
+  }
+}
+
 
 .flip1,
 .flip2,
@@ -333,7 +338,7 @@ header {
     ) 1 100%;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 768px) {
   .skill-tags,
   .js-area {
     padding-left: 1em;
@@ -345,6 +350,10 @@ header {
 
   .js-area > p {
     margin-bottom: 1em;
+  }
+
+  .aspect-ratio > p {
+    text-align: left;
   }
 
   .aspect-ratio > h2 {
@@ -362,7 +371,7 @@ header {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 1280px) {
   .challenge {
     padding: 1.5em 1.5em 0 1.5em;
 
@@ -378,9 +387,13 @@ header {
 }
 
 .menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: black;
   position: fixed;
-  width: 100vw;
+  width: 100%;
+  min-height: 50px;
   top: 0;
   z-index: 1;
 }
@@ -446,20 +459,6 @@ header {
   .profile-description {
     padding: 0px 1.5em;
     margin-top: 1.5em;
-  }
-
-  .aspect-ratio {
-    background-color: transparent;
-    border: none;
-  }
-
-  .right-row1front,
-  .row21-area1front,
-  .row21-area2front,
-  .row22-area1front,
-  .row22-area2front,
-  .right-row4front {
-    background-color: rgba(128, 128, 128, 0.2);
   }
 }
 
@@ -642,7 +641,15 @@ header {
   color: white;
 }
 
-@media (min-width: 1280px) {
+@media (max-width: 1280px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1281px) {
   .projects {
     display: flex;
     align-items: flex-start;
@@ -661,7 +668,7 @@ header {
 
   .challenge,
   .javascript {
-    width: 50vw;
+    width: 50%;
     margin: 0 auto;
   }
 
@@ -734,29 +741,47 @@ header {
 }
 
 /* fazer funcionar para celular */
-@media (max-width: 414px) {
+@media (max-width: 768px) {
+  .tags li {
+    margin: 0px 10px 10px 0px;
+  }
+}
+
+.footer-twitch p {
+  width: 100%;
+  color: white;
+  margin: 0.1em;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 38px;
+  text-align: right;
+}
+
+@media (max-width: 1280px) {
   .footer-container {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
 
   #SamplePlayerDivID > iframe {
     width: 90vw;
-    height: calc(90vw*0.5625);
+    height: calc(90vw * 0.5625);
   }
 
   .footer-icons {
-    padding: 5vw;
+    padding: 5%;
     background-image: linear-gradient( -45deg, #43CBFF 10%, #9708CC 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .tags li {
-    margin: 0px 10px 10px 0px;
+  .footer-twitch > p {
+    text-align: center;
   }
 }
 
-.footer-twitch p,
 .footer-icons a {
   color: white;
   font-size: 4em;
@@ -764,20 +789,22 @@ header {
   text-align: center; 
 }
 
-.footer-icons td {
-  padding: 5px 5px;
-  text-align: left;
-}
-
 .footer-icons th {
   padding: 5px 5px;
-}
-
-.footer-twitch p,
-.footer-icons th {
   font-weight: 300;
   font-style: italic;
   font-size: 38px;
+  text-align: left;
+}
+
+@media (max-width: 1280px) {
+  .footer-icons th {
+    text-align: center;
+  }
+}
+
+.footer-icons td {
+  padding: 5px 5px;
   text-align: left;
 }
 
@@ -790,9 +817,9 @@ header {
   padding: 3em;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 768px) {
   .footer-twitch {
-    padding: 5vw;
+    padding: 5%;
   }
 
   .footer-icons th,
@@ -806,7 +833,7 @@ header {
 }
 
 .footer-text {
-  width: 100vw;
+  width: 100%;
   background-color: black;
   padding: 1em 0;
   border-top: white 1px solid;
