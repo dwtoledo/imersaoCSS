@@ -134,7 +134,7 @@ header {
 .grid-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   position: relative;
   width: 100%;
   height: 100%;
@@ -150,6 +150,12 @@ header {
   display: grid;
   grid-template-rows: 15% calc(70% - 1.5vh) 15%;
   row-gap: 0.5vh;
+}
+
+.aspect-ratio {
+  border-left: solid 3px;
+  border-image: linear-gradient( to bottom, #9708CC, #6696eb ) 1 100%;
+  padding-left: 1em;
 }
 
 @media (min-width: 769px) {
@@ -174,6 +180,11 @@ header {
 @media (min-width: 1281px) {
   .aspect-ratio {
     margin: 3em 3em 2em 0;
+  }
+
+  .aspect-ratio {
+    border: none;
+    padding-left: 0;
   }
 }
 
@@ -238,7 +249,7 @@ header {
 .row22-area2front,
 .right-row4front {
   background-color: rgba(255, 255, 255, 0.8);
-  border: black solid 1px;
+  border: black solid 2px;
   color: black;
   font-size: 0.5em;
 }
@@ -255,6 +266,7 @@ header {
 .row22-area1back {
   color: white;
   transform: rotateY(180deg);
+  border: none;
 }
 
 .right-row2,
@@ -338,9 +350,14 @@ header {
     ) 1 100%;
 }
 
+.aspect-ratio {
+  padding-left: 3em;
+}
+
 @media (max-width: 768px) {
   .skill-tags,
-  .js-area {
+  .js-area,
+  .aspect-ratio {
     padding-left: 1em;
   }
 
@@ -369,13 +386,23 @@ header {
   .challenge {
     padding-top: 1.5em;
   }
+
+  .right-row1front,
+.row21-area1front,
+.row21-area2front,
+.row22-area1front,
+.row22-area2front,
+.right-row4front {
+  border: black solid 1px;
+}
+
 }
 
 @media (max-width: 1280px) {
   .challenge {
     padding: 1.5em 1.5em 0 1.5em;
-
   }
+
   .javascript {
     padding: 0 1.5em 1.5em 1.5em;
   }
@@ -383,6 +410,10 @@ header {
   .js-area,
   .skill-tags {
     margin: 3em 0 1em 0;
+  }
+
+  .aspect-ratio {
+    align-items: flex-start;
   }
 }
 
@@ -645,7 +676,6 @@ header {
   .projects {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -680,6 +710,10 @@ header {
   .challenge-grid {
     max-width: 550px;
     height: 100%;
+  }
+
+  .grid-wrapper {
+    align-items: flex-end;
   }
 }
 
@@ -841,4 +875,19 @@ header {
 
 .footer-text a {
   font-size: 1.2em;
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .projects {
+    align-items: center;
+  }
+
+  .javascript,
+  .challenge {
+    width: 65vw;
+  }
+
+  .js-area > h2 {
+    text-align: left;
+  }
 }
