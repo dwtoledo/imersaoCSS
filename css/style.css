@@ -388,14 +388,13 @@ header {
   }
 
   .right-row1front,
-.row21-area1front,
-.row21-area2front,
-.row22-area1front,
-.row22-area2front,
-.right-row4front {
+  .row21-area1front,
+  .row21-area2front,
+  .row22-area1front,
+  .row22-area2front,
+  .right-row4front {
   border: black solid 1px;
-}
-
+  }
 }
 
 @media (max-width: 1280px) {
