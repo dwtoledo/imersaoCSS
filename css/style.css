@@ -921,3 +921,8 @@ header {
     padding: 2em 1em;
   }
 }
+
+.dev-to-logo {
+  width: 60px;
+  height: auto;
+}
