@@ -360,7 +360,8 @@ header {
     padding-left: 1em;
   }
 
-  .js-area > h2 {
+  .js-area > h2,
+  .skill-tags > h2 {
     text-align: left;
   }
 
