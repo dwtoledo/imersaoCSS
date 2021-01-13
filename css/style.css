@@ -501,7 +501,7 @@ header {
 
   .skill-tags,
   .js-area {
-    margin: 3em 0 0em 0em;
+    margin: 3em 0;
   }
 }
 
@@ -773,8 +773,7 @@ header {
   align-items: flex-start;
 }
 
-/* fazer funcionar para celular */
-@media (max-width: 768px) {
+@media (max-width: 1460px) {
   .tags li {
     margin: 0px 10px 10px 0px;
   }
