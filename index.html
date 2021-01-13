@@ -19,12 +19,12 @@
     <header>
         <nav class="menu">
             <ul>
-                <li><a href="#challengeID">grid <strong>challenge </strong><i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#javascriptID">js <strong>integration </strong><i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#contactID"><strong>contact</strong> me <i class="fas fa-chevron-right"></i></a></li>      
+                <li><a href="#home"><strong>Home </strong><i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#my-skills">my <strong>skills </strong><i class="fas fa-chevron-right"></i></a></li>
+                <li><a href="#contact"><strong>contact</strong> me <i class="fas fa-chevron-right"></i></a></li>      
             </ul>
         </nav>
-        <div class="grid-header">
+        <div class="grid-header" id="home">
             <div class="flip-card">
                 <div class="card-profile">
                     <div class="front-profile">
@@ -37,12 +37,22 @@
             </div>
             
             <div class="profile">
-                <h1 class="profile-title"><strong class="typewriter-effect" data-period="5000" data-type='[ "Douglas Toledo", "bem vindo ao meu portfólio!"]'></strong></h1>
+                <h1 class="profile-title"><strong class="typewriter-effect" data-period="5000" data-type='[ "Douglas Toledo", "welcome to my portfolio!"]'></strong></h1>
                 <h2 class="profile-subtitle"><strong>frontend</strong> developer</h2>
                 <h2 class="profile-subtitle"><strong>streamer</strong> on twitch</h2>
                 <p class="profile-description">after work as entrepreneur! <i><a href="https://viisolutions.com.br" target="_blank">+ info</a></i></p>
             </div>
         </div>
+
+        <div class="dev-community">
+            <div class="dev-community__title">
+                <img src="/img/dev-to_icon.png" alt="Logo da Dev Community">
+                <h3><strong>Latest post:</strong></h3>
+            </div>
+            <a href="https://dev.to/dwtoledo/tags-html-para-tabelas-e-dicas-do-vs-code-53lf">HTML tags for Tables and VS Code tips.</a>            
+        </div>
+        
+
     </header>
 
     <main class="projects">
@@ -130,7 +140,7 @@
             
         </section>
     
-        <section class="javascript" id="javascriptID">
+        <section class="javascript" id="my-skills">
             
     
             <form class="jscalculation">
@@ -221,7 +231,7 @@
                 </script>
             </div>
     
-            <div class="footer-icons">
+            <div class="footer-icons" id="contact">
                 <table>
                     <thead>
                         <th colspan="4"><strong>&lt;socials/&gt;</strong></th>

@@ -33,17 +33,16 @@ h4 {
 header {
   align-items: center;
   display: grid;
-  height: 75vh;
   margin-top: 50px;
+  background-image: linear-gradient( -45deg, #43CBFF 10%, #9708CC 100%);
 }
 
 .grid-header {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  height: 60vh;
   justify-content: center;
-  background-image: linear-gradient( -45deg, #43CBFF 10%, #9708CC 100%);
   color: white;
 }
 
@@ -888,5 +887,37 @@ header {
 
   .js-area > h2 {
     text-align: left;
+  }
+}
+
+.dev-community {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em 0;
+}
+
+.dev-community a {
+  text-decoration: none;
+  color: white;
+}
+
+.dev-community__title {
+  display: flex;
+  align-items: center;
+}
+
+.dev-community__title > h3 {
+  color: white;
+}
+
+.dev-community__title > img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+@media (max-width: 414px) {
+  .dev-community {
+    padding: 2em 1em;
   }
 }
