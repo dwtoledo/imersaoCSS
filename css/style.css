@@ -743,6 +743,54 @@ header {
   margin-right: 0;
 }
 
+.html-hide,
+.css-hide,
+.js-hide,
+.ts-hide,
+.git-hide,
+.python-hide,
+.c-hide,
+.agile-hide {
+  display: none;
+}
+
+.tag-html,
+.tag-css,
+.tag-js,
+.tag-ts,
+.tag-git,
+.tag-python,
+.tag-c,
+.tag-agile {
+  position: relative;
+}
+
+.tag-html:hover > .html-hide,
+.tag-css:hover > .css-hide,
+.tag-js:hover > .js-hide,
+.tag-ts:hover > .ts-hide,
+.tag-git:hover > .git-hide,
+.tag-python:hover > .python-hide,
+.tag-c:hover > .c-hide,
+.tag-agile:hover > .agile-hide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-tooltip {
+  position: absolute;
+  left: 0;
+  top: 48px;
+  min-width: 175px;
+  min-height: 70px;
+  background-color: rgba(35, 41, 46, 0.9);
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .footer {
   font-size: 0.7em;
   color: white;
@@ -872,13 +920,14 @@ header {
 
 .footer-text {
   width: 100%;
-  background-color: black;
+  background-color: rgb(35, 41, 46);
   padding: 1em 0;
   border-top: white 1px solid;
 }
 
-.footer-text a {
+.footer-text p {
   font-size: 1.2em;
+  font-weight: 500;
 }
 
 @media (min-width: 769px) and (max-width: 1280px) {
