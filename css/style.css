@@ -119,8 +119,7 @@ header {
 .profile h2 strong,
 .challenge h2 strong,
 .javascript h2 strong,
-.footer strong,
-.footer a {
+.footer strong {
   font-weight: 500;
 }
 
@@ -814,11 +813,18 @@ header {
   }
 }
 
-.footer-icons a {
+.footer-icons__icon {
   color: white;
   font-size: 4em;
   margin: 0.1em;
   text-align: center; 
+}
+
+.footer-icons__label {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 300;
 }
 
 .footer-icons th {
