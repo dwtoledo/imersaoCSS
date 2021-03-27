@@ -1011,12 +1011,57 @@ header {
 }
 
 .about-me__card {
-  width: 400px;
+  max-width: 400px;
   height: auto;
   background-color: whitesmoke;
   box-shadow: rgb(199, 199, 199) 5px 5px;
   padding: 25px;
   border: rgb(199, 199, 199) 1px solid;
+  border-radius: 10px;
+}
+
+@media (max-width: 1279px) {
+  .about-me__card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .viisolutions-wrapper,
+  .viirotas-wrapper,
+  .google-wrapper {
+    justify-self: flex-end;
+  }
+
+  .viibus-wrapper,
+  .ecommerce-wrapper,
+  .poo-wrapper {
+    justify-self: flex-start;
+  }
+
+  .about-me__card-grid {
+    column-gap: 60px;
+  }
+
+}
+
+@media (max-width: 899px) {
+  .about-me__card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .viisolutions-wrapper,
+  .viirotas-wrapper,
+  .google-wrapper,
+  .viibus-wrapper,
+  .ecommerce-wrapper,
+  .poo-wrapper {
+    justify-self: center;
+  }
+
+  .about-me__card {
+    margin: 0 1.5em;
+  }
+
+
 }
 
 .about-me__card-figure {
