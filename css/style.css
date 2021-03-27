@@ -99,6 +99,10 @@ header {
   padding-top: 1.5em;
 }
 
+.about-me {
+  padding-top: 1.5em;
+}
+
 @media (min-width: 550px) {
   .profile {
     padding-top: 0px;
@@ -107,6 +111,7 @@ header {
   }
 }
 
+.about-me h2,
 .challenge h2,
 .javascript h2  {
   font-style: italic;
@@ -116,6 +121,7 @@ header {
   font-size: 38px;
 }
 
+.about-me h2 strong,
 .profile h2 strong,
 .challenge h2 strong,
 .javascript h2 strong,
@@ -339,7 +345,7 @@ header {
   flex-direction: column;
   align-items: flex-start;
   border-left: 3px solid;
-  padding-left: 3em;
+  padding: 0 3em;
   border-image: 
     linear-gradient(
       to bottom,
@@ -356,7 +362,7 @@ header {
   .skill-tags,
   .js-area,
   .aspect-ratio {
-    padding-left: 1em;
+    padding: 1em;
   }
 
   .js-area > h2,
@@ -729,7 +735,7 @@ header {
   color: black;
   padding: 6px;
   font-size: 0.8em;
-  margin: 0 10px;
+  margin: 0 10px 10px 10px;
   box-shadow: black 3px 3px;
   border: 1px solid black;
   font-weight: 500;
@@ -787,8 +793,8 @@ header {
   background-color: rgba(35, 41, 46, 0.9);
   color: white;
   font-size: 0.75rem;
-  border-radius: 10px;
   padding: 10px;
+  z-index: 1;
 }
 
 .footer {
@@ -818,12 +824,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-@media (max-width: 1460px) {
-  .tags li {
-    margin: 0px 10px 10px 0px;
-  }
 }
 
 .footer-twitch p {
@@ -981,3 +981,75 @@ header {
   width: 60px;
   height: auto;
 }
+
+.about-me {
+  background-color: #FFFFFF;
+}
+
+.about-me__card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  width: 100%;
+  row-gap: 60px;
+  padding: 30px 0px;
+}
+
+.about-me__card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.viisolutions-wrapper,
+.ecommerce-wrapper {
+  justify-self: flex-end;
+}
+
+.viirotas-wrapper,
+.poo-wrapper {
+  justify-self: flex-start;
+}
+
+.about-me__card {
+  width: 400px;
+  height: auto;
+  background-color: whitesmoke;
+  box-shadow: rgb(199, 199, 199) 5px 5px;
+  padding: 25px;
+  border: rgb(199, 199, 199) 1px solid;
+}
+
+.about-me__card-figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.about-me__card-title {
+  background: -webkit-linear-gradient(135deg, #44cbff 0%, #7b49dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-me__card-description {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.about-me__card-description > a {
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  font-size: 18px;
+}
+
+.about-me__card-img {
+  height: auto;
+  width: 100%;
+}
+

@@ -1,0 +1,133 @@
+* {
+    font-family: arial, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.google-buttons,
+.google-search,
+.google-nav {
+    align-items: center;
+    display: flex;
+}
+
+.google-search {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.google-nav {
+    background-color: #f1f1f1;
+    height: 60px;
+    justify-content: flex-end;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.google-nav > a {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+    padding-right: 24px;
+    text-decoration: none;
+}
+
+.google-nav > a:last-child {
+    padding-left: 24px;
+}
+
+.input-bar,
+.google-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 40vw;
+}
+
+.google-input {
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 15px;
+}
+
+.google-input:hover {
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.google-input:focus {
+    outline: none;
+}
+
+.google-form > input,
+.google-buttons {
+    margin-top: 20px;
+}
+
+.google-buttons {
+    justify-content: center;
+}
+
+.google-buttons > input {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    padding: 10px 20px;
+}
+
+.google-buttons > input:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.google-buttons input:last-child {
+    margin-left: 20px;
+}
+
+.google-logo {
+    display: flex;
+    height: 92px;
+    margin: 0 auto;
+    width: 272px;
+}
+
+.image-wrapper {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.image-wrapper > span {
+    bottom: 0;
+    color: #4285f4;
+    position: absolute;
+    right: 0;
+}
+
+.input-bar {
+    position: relative;
+}
+
+.loupe-img {
+    display: flex;
+    height: 18px;
+    position: absolute;
+    right: 1vw;
+    top: 2vh;
+    width: 18px;
+}
+
+.loupe-img:focus {
+    outline: none;
+}

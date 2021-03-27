@@ -1,0 +1,130 @@
+* {
+    font-family: arial, sans-serif;
+}
+
+body {
+    padding: 60px 3vw 0px 3vw;
+}
+
+em {
+    font-family: monospace;
+    font-style: normal;
+}
+
+.confirm-search,
+.form-title,
+.google-nav,
+.advanced-inputs,
+.h2 {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    border-bottom: #f1f1f1 1px solid;
+    color: #d93025;
+    font-size: 20px;
+    font-weight: 400;
+    height: 60px;
+}
+
+.advanced-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.google-nav {
+    background-color: #f1f1f1;
+    height: 60px;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.nav-image {
+    height: 33px;
+    padding-left: 24px;
+}
+
+.google-nav > a {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+    padding-right: 24px;
+    text-decoration: none;
+}
+
+.form-title > p,
+.advanced-inputs > label,
+.confirm-search > p {
+    color: #222222;
+    display: inline-block;
+    min-width: 167px;
+}
+
+.advanced-inputs > label {
+    font-size: 13px;
+}
+
+.form-title > div,
+.form-title > input,
+.advanced-inputs > input {
+    padding: 5px; 
+    width: 30vw;
+}
+
+.confirm-button {
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    width: calc(30vw + 12px);
+}
+
+.confirm-button > input {
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.advanced-inputs {
+    margin: 5px 0px;
+}
+
+.advanced-inputs > input {
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+}
+
+.form-title > input {
+    background-color: transparent;
+    border: none;
+}
+
+.form-title > span {
+    color: #777777;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.advanced-inputs > span {
+    color: #666;
+    font-size: 11px;
+    margin-left: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.solid {
+    border: none;
+    border-top: #f1f1f1 1px solid;
+    width: 100%;
+}
