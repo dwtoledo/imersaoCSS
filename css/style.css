@@ -488,25 +488,14 @@ header {
 	text-align: left;
 }
 
-.profile-description {
-	font-size: 16px;
-	text-align: left;
-}
-
 .profile a {
 	color: white;
 }
 
 @media (max-width: 549px) {
 	.profile-title,
-	.profile-subtitle,
-	.profile-description {
+	.profile-subtitle {
 		text-align: center;
-	}
-
-	.profile-description {
-		padding: 0px 1.5em;
-		margin-top: 1.5em;
 	}
 }
 
@@ -1074,8 +1063,8 @@ header {
 	}
 
 	.project-card-flip {
-		width: 90vw;
-		height: calc(90vw * 0.666666666);
+		width: 88vw;
+		height: calc(88vw * 0.666666666);
 	}
 
 	.card-flip__project-description {
