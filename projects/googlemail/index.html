@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Gmail by @dwtoledo</title>
+	</head>
+	<body>
+		<header class="navbar">
+			<div class="navbar__brand">
+				<div class="navbar__hamburger">
+					<div class="navbar__hamburger-line"></div>
+					<div class="navbar__hamburger-line"></div>
+					<div class="navbar__hamburger-line"></div>
+				</div>
+				<img
+					class="navbar__gmail-logo"
+					src="./assets/img/gmail-logo.png"
+					alt="Logo do Gmail"
+				/>
+				<p class="navbar__gmail-text">Gmail</p>
+			</div>
+
+			<div class="navbar__search-bar">
+				<form action="#" class="navbar__search-form">
+					<img
+						src="./assets/icon/search-icon.svg"
+						alt="Ícone de lupa para indicar a barra de pesquisa"
+						class="navbar__search-icon"
+					/>
+					<input
+						type="text"
+						name="search-value"
+						placeholder="Search mail"
+						class="navbar__search-input"
+					/>
+					<img
+						src="./assets/icon/drop-arrow.svg"
+						alt="Ícone de seta para indicar as buscas recentes da barra de pesquisa"
+						class="navbar__drop-arrow-icon"
+					/>
+				</form>
+			</div>
+
+			<div class="navbar__g-suite">
+				<img
+					src="./assets/icon/help-icon.svg"
+					alt="Ícone para abrir a ajuda Google"
+					class="navbar__help-icon"
+				/>
+				<img
+					src="./assets/icon/settings-icon.svg"
+					alt="Ícone para abrir as configurações Google"
+					class="navbar__settings-icon"
+				/>
+				<img
+					src="./assets/icon/apps-icon.svg"
+					alt="Ícone para abrir as aplicações Google"
+					class="navbar__apps-icon"
+				/>
+
+				<div class="navbar__g-suite-card">
+					<img
+						src="./assets/icon/google-g-icon.svg"
+						alt="Logo do Google somente com a letra G"
+						class="navbar__google-g-icon"
+					/>
+					<p class="navbar__card-text">Suite</p>
+					<img
+						src="./assets/img/avatar.svg"
+						alt="Imagem de perfil do usuário Google"
+						class="navbar__avatar"
+					/>
+				</div>
+			</div>
+		</header>
+		<main class="mainly-content">
+			<aside class="left-menu">
+				<div class="menu-categories">
+					<button class="menu-categories__button">
+						<img
+							src="./assets/icon/plus-icon.svg"
+							alt="Ícone de mais do Google representado a criação de um novo email"
+							class="menu-categories__button-img"
+						/>
+						<p class="menu-categories__button-text">Compose</p>
+					</button>
+
+					<table class="menu-categories__table">
+						<tbody class="menu-categories__table-body">
+							<tr class="menu-categories__table-row">
+								<td
+									class="menu-categories__icon category-selected"
+								>
+									<img
+										src="./assets/icon/inbox-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td
+									class="menu-categories__category category-selected"
+								>
+									<p>Inbox</p>
+								</td>
+								<td
+									class="menu-categories__counter category-selected-end"
+								>
+									<p>99</p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/starred-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Starred</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/snoozed-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Snoozed</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/important-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Important</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/sent-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Sent</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/trash-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Trash</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/drafts-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Drafts</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p>14</p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/starred-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Categories</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/green-tag.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Team</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/yellow-tag.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>News</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/blue-tag.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Work</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/red-tag.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>Personal</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+							<tr class="menu-categories__table-row">
+								<td class="menu-categories__icon">
+									<img
+										src="./assets/icon/arrow-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-categories__category">
+									<p>More</p>
+								</td>
+								<td class="menu-categories__counter">
+									<p></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="menu-meet">
+					<p class="menu-meet__title">Meet</p>
+
+					<table class="menu-meet__table">
+						<tbody class="menu-meet__table-body">
+							<tr class="menu-meet__table-row">
+								<td class="menu-meet__icon">
+									<img
+										src="./assets/icon/meet-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-meet__category">
+									<p>New meeting</p>
+								</td>
+							</tr>
+							<tr class="menu-meet__table-row">
+								<td class="menu-meet__icon">
+									<img
+										src="./assets/icon/calendar-meet-icon.svg"
+										alt=""
+									/>
+								</td>
+								<td class="menu-meet__category">
+									<p>My meetings</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</aside>
+			<div class="view-mail">
+				<div class="view-mail__header">
+					<div class="view-mail__header-buttons">
+						<div class="view-mail__header-left-buttons">
+							<img
+								src="./assets/icon/arrow_back.svg"
+								alt="Ícone para retornar à lista de emails"
+							/>
+							<img
+								src="./assets/icon/archive.svg"
+								alt="Ícone indicando a opção de arquivar o email aberto em tela"
+							/>
+							<img
+								src="./assets/icon/report.svg"
+								alt="Ícone para reportar um email suspeito de spam, pishing ou que afete a sua segurança de alguma maneira"
+							/>
+							<img
+								src="./assets/icon/delete.svg"
+								alt="Ícone para seletar o email aberto em tela"
+							/>
+							<div class="view-mail__header-separator"></div>
+							<img
+								src="./assets/icon/mark_as_unread.svg"
+								alt="Ícone para marcar o email como lido retornando à lista de emails em seguida"
+							/>
+							<img
+								src="./assets/icon/clock.svg"
+								alt="Ícone para adicionar o email à lista de ler mais tarde"
+							/>
+							<img
+								src="./assets/icon/add_task.svg"
+								alt="Ícone para adicionar uma tarefa relacionada ao email"
+							/>
+							<div class="view-mail__header-separator"></div>
+							<img
+								src="./assets/icon/drive_file_move.svg"
+								alt="Ícone para mover e armazenar o email à sua conta Google Drive"
+							/>
+							<img
+								src="./assets/icon/label.svg"
+								alt="Ícone para adicionar, alterar ou remover os marcadores de categorias do email"
+							/>
+							<img
+								src="./assets/icon/3dots.svg"
+								alt="Ícone para abrir mais opções de ações a serem realizadas no email"
+							/>
+						</div>
+						<div class="view-mail__header-right-buttons">
+							<span class="view-mail__header-paginator"
+								>1 of 16</span
+							>
+							<img
+								src="./assets/icon/small-arrow-back.svg"
+								alt="Ícone para retornar ao email anterior"
+							/>
+							<img
+								src="./assets/icon/small-arrow-next.svg"
+								alt="Ícone para exibir o próximo email"
+							/>
+						</div>
+					</div>
+					<div class="view-mail__header-title">
+						<div class="view-mail__header-title-left">
+							<p class="view-mail__header-title-text">
+								New Gmail inbox
+							</p>
+							<img
+								src="./assets/icon/yellow-title-tag.svg"
+								alt="Tag Amarela sinalizando que o email está na categoria News"
+							/>
+							<div class="view-mail__category-card">
+								<span class="view-mail__category-card-text">
+									Inbox
+								</span>
+								<span class="view-mail__category-card-close">
+									x
+								</span>
+							</div>
+						</div>
+
+						<div class="view-mail__header-title-right">
+							<img
+								src="./assets/icon/print-icon.svg"
+								alt="Imprimir email"
+							/>
+							<img
+								src="./assets/icon/open-in-new-icon.svg"
+								alt="Abrir email em uma nova janela"
+							/>
+						</div>
+					</div>
+					<div class="view-mail__header-from">
+						<div class="view-mail__header-from-start">
+							<img
+								src="./assets/img/avatar.svg"
+								alt="Imagem do remetente do email"
+							/>
+							<div>
+								<div>
+									<span>
+										<strong> FROM </strong>
+										&lt;email@mail.service&gt;</span
+									>
+									<span
+										class="view-mail__header-from-unsubscribe"
+										>Unsubscribe</span
+									>
+								</div>
+								<div class="view-mail__header-from-to-me">
+									<span>to me</span>
+									<img
+										src="./assets/icon/down-arrow-icon.svg"
+										alt="Ícone para expandir os detalhes de quem enviou o email"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="view-mail__header-from-end">
+							<p>8:02 AM (34 minutes ago)</p>
+							<img
+								src="./assets/icon/star-favorite-icon.svg"
+								alt="Favoritar email"
+							/>
+							<img
+								src="./assets/icon/reply-icon.svg"
+								alt="Responder email"
+							/>
+							<img
+								src="./assets/icon/more-email-options-icon.svg"
+								alt="Abrir mais opções de ações de email"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="view-mail__body">
+					<div class="mail">
+						<div class="mail__top">
+							<div class="mail__top-left">
+								<span
+									>Gmail inbox<br />
+									template</span
+								>
+								<a href="#">
+									<span>See more</span>
+									<img
+										src="./assets/icon/right-arrow-mail-icon.svg"
+										alt="Ver mais opções do Gmail inbox template"
+									/>
+								</a>
+							</div>
+							<div class="mail__top-right">
+								<img
+									src="./assets/img/mail-img-placeholder.svg"
+									alt="Placeholder da imagem do email"
+								/>
+							</div>
+						</div>
+						<div class="mail__botton">
+							<div class="mail__botton-card">
+								<img
+									src="./assets/img/mail-img-placeholder.svg"
+									alt="Placeholder da imagem do email"
+								/>
+							</div>
+							<div class="mail__botton-card">
+								<img
+									src="./assets/img/mail-img-placeholder.svg"
+									alt="Placeholder da imagem do email"
+								/>
+							</div>
+							<div class="mail__botton-card">
+								<img
+									src="./assets/img/mail-img-placeholder.svg"
+									alt="Placeholder da imagem do email"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<aside class="right-menu">
+				<img
+					class="right-menu__app-icon"
+					src="./assets/icon/google-keep.svg"
+					alt="Ícone para ir até o Google Keep"
+				/>
+				<img
+					class="right-menu__app-icon"
+					src="./assets/icon/google-calendar.svg"
+					alt="Ícone para ir até o Google Calendar"
+				/>
+				<div class="right-menu__separator"></div>
+				<img
+					class="right-menu__app-icon"
+					src="./assets/icon/right-bar-plus.svg"
+					alt="Ícone para adicionar na barra lateral direita um novo aplicativo Google"
+				/>
+			</aside>
+		</main>
+	</body>
+</html>
